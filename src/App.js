@@ -1,11 +1,13 @@
 import React from "react";
-import NavBar from "./components/NavBar";
+import ItemListContainer from "./Components/ItemListContainer";
+import NavBar from "./Components/NavBar";
 
 
 export default function App() {
   return (
     <>
     <NavBar/>
+    <ItemListContainer/>
     </>
   );
 }

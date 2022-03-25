@@ -17,6 +17,7 @@
     grid-area: logo;
     display: flex;
     padding-left: 20px;
+    padding-top: 5px;
 }
 
 .tittle{
@@ -34,8 +35,11 @@
     grid-area: shopping;
     display: flex;
     justify-content: end;
-
     padding-left: 70px;
+    padding-right: 7px;
+    padding-top: 5px;
+    cursor: pointer;
+    position: relative;
 }
 
 .decoration{
@@ -76,4 +80,11 @@
 .space_2 a{
     text-decoration: none;
     color: #000;
+}
+
+.top_right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
 }
