@@ -88,3 +88,59 @@
     right: 0;
     font-size: 12px;
 }
+.card{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    display: grid;
+    grid-template-areas: 
+    "image"
+    "counter";
+}
+
+.image{
+    grid-area: image;
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+}
+.counter{
+    grid-area: counter;
+}
+
+.counter{
+    display: grid;
+    grid-template-areas: 
+    "decrement counter increase"
+    "reset reset reset";
+}
+
+.decrement{
+    grid-area: decrement;
+    margin: 2px;
+}
+.counter{
+    grid-area: counter;
+}
+.increase{
+    grid-area: increase;
+    margin: 2px;
+}
+.reset{
+    grid-area: reset;
+    margin: 2px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+.counter_{
+    display: flex;
+    justify-content: center;
+}
+
+.space_{
+    padding: 2px;
+}

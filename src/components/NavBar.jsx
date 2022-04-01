@@ -26,7 +26,7 @@ export default function NavBar() {
         </div>
 
         <div className="tittle">
-            <a href="">Anise</a>
+            <a href="https://images.squarespace-cdn.com/content/v1/5f524ac57dc3b76ad5060050/1599228653075-WHPTXCS63EID1951JW35/SQSP_Jewelry_Product_101_7423+2.jpg?format=750w">Anise</a>
         </div>
 
         <div className="links">
