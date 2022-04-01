@@ -10,7 +10,7 @@
     "a name b"
     "logo c shopping"
     "d nav e";
-    padding: 30px 60px;
+    padding: 20px 50px;
 }
 
 .contact_me{
@@ -89,8 +89,8 @@
     font-size: 12px;
 }
 .card{
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     padding: 20px;
     display: grid;
     grid-template-areas: 
@@ -102,7 +102,9 @@
     grid-area: image;
     display: flex;
     justify-content: center;
-    padding: 2px;
+    padding: 10px;
+    width: 250px;
+    height: 250px;
 }
 .counter{
     grid-area: counter;
