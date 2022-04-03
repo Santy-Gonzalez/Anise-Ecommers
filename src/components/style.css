@@ -88,14 +88,26 @@
     right: 0;
     font-size: 12px;
 }
-.card{
-    width: 250px;
-    height: 250px;
-    padding: 20px;
+
+.grid{
     display: grid;
     grid-template-areas: 
-    "image"
-    "counter";
+    "card1 card2 card3";
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-column-gap: 4vw;
+    grid-row-gap: 4vw;
+}
+
+.card1{
+    grid-area: card1;
+}
+
+.card2{
+    grid-area: card2;
+}
+
+.card3{
+    grid-area: card3;
 }
 
 .image{
@@ -103,9 +115,10 @@
     display: flex;
     justify-content: center;
     padding: 10px;
-    width: 250px;
-    height: 250px;
+    height: 480px;
+    width: 350px;
 }
+
 .counter{
     grid-area: counter;
 }
@@ -136,6 +149,7 @@
 .flex{
     display: flex;
     justify-content: space-around;
+    padding: 30px;
 }
 
 .counter_{
