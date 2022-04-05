@@ -3,6 +3,9 @@
     margin: 0;
     font-family: teimer-web;
 }
+.back{
+    background-color: #fff5fa;
+}
 .navbar{
     background-color: #fff5fa;
     display: grid;
@@ -89,38 +92,21 @@
     font-size: 12px;
 }
 
-.grid{
-    display: grid;
-    grid-template-areas: 
-    "card1 card2 card3";
-    grid-template-columns: repeat(3,minmax(0,1fr));
-    grid-column-gap: 4vw;
-    grid-row-gap: 4vw;
-}
-
-.card1{
-    grid-area: card1;
-}
-
-.card2{
-    grid-area: card2;
-}
-
-.card3{
-    grid-area: card3;
-}
-
-.image{
-    grid-area: image;
+.name{
     display: flex;
     justify-content: center;
-    padding: 10px;
-    height: 480px;
-    width: 350px;
+    padding: 5px;
 }
 
-.counter{
-    grid-area: counter;
+.price{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.imagee img{
+    width: 360px;
+    height: 500px;
 }
 
 .counter{
@@ -128,11 +114,14 @@
     grid-template-areas: 
     "decrement counter increase"
     "reset reset reset";
+    justify-content: center;
 }
 
 .decrement{
     grid-area: decrement;
     margin: 2px;
+    display: flex;
+    justify-content: end;
 }
 .counter{
     grid-area: counter;
@@ -140,23 +129,16 @@
 .increase{
     grid-area: increase;
     margin: 2px;
+    display: flex;
+    justify-content: start;
 }
 .reset{
     grid-area: reset;
     margin: 2px;
+    width: 100%;
 }
 
-.flex{
-    display: flex;
-    justify-content: space-around;
-    padding: 30px;
-}
-
-.counter_{
+.reset{
     display: flex;
     justify-content: center;
-}
-
-.space_{
-    padding: 2px;
 }
