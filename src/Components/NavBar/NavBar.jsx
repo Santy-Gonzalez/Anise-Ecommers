@@ -1,7 +1,6 @@
 import React from "react";
 import CartWidget from "./CartWidget";
-import "./style.css"
-
+import "./styleNavBar.css"
 
 export default function NavBar() {
   return (
@@ -29,7 +28,7 @@ export default function NavBar() {
             <a href="https://images.squarespace-cdn.com/content/v1/5f524ac57dc3b76ad5060050/1599228653075-WHPTXCS63EID1951JW35/SQSP_Jewelry_Product_101_7423+2.jpg?format=750w">Anise</a>
         </div>
 
-        <div className="links">
+        <div className="Links">
             <ul className="decoration">
                 <li><a href="">Inicio</a></li>
                 <li><a href="">Tienda</a></li>
