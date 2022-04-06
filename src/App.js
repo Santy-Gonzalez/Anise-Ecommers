@@ -1,5 +1,5 @@
 import React from "react";
-import ItemDetailContainer from "./Components/DetailsProducts/ItemDetailContainer";
+import ItemDetail from "./Components/DetailsProducts/ItemDetail";
 import ItemListContainer from "./Components/ItemList/ItemListContainer";
 import NavBar from "./Components/NavBar/NavBar";
 import NavBarMobile from "./Components/NavBar/NavBarMobile.jsx";
@@ -11,7 +11,7 @@ export default function App() {
     <NavBar/>
     <NavBarMobile/>
     <ItemListContainer/>
-    <ItemDetailContainer/>
+    <ItemDetail/>
     </>
   );
 }
