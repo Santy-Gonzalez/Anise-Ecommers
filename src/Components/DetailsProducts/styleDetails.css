@@ -1,0 +1,95 @@
+.detailcontainer{
+    display: grid;
+    grid-template-areas: 
+    "detailimage detailname"
+    "detailimage detailprice"
+    "detailimage details"
+    "detailimage amountcontainer"
+    "detailimage adddetails";
+    padding: 30px 0px;
+    justify-content: center;
+    column-gap: 100px;
+    background-color: #fff5fa;
+    font-family: teimer-web;
+}
+
+.detailimage{
+    grid-area: detailimage;
+}
+
+.detailimage img{
+    width: 350px;
+    height: 450px;
+}
+
+.detailname{
+    grid-area: detailname;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font: teimer-web;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.detailprice{
+    grid-area: detailprice;
+    display: flex;
+    justify-content: center;
+    font: teimer-web;
+    font-weight: 400;
+}
+
+.details{
+    grid-area: details;
+    display: flex;
+    text-align: center;
+    width: 380px;
+    font-size: 15px;
+    font: teimer-web;
+    font-weight: 400;
+}
+
+.amountcontainer{
+    grid-area: amountcontainer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detailsamount{
+    margin: 5px;
+}
+
+.amount{
+    font: teimer-web;
+    font-weight: 400;
+}
+
+.adder{
+    background-color: #fff5fa;
+    width: 40px;
+    height: 10px;
+    padding: 25px;
+    border: 1px solid grey;
+}
+
+.adddetails{
+    grid-area: adddetails;
+    display: flex;
+    justify-content: center;
+}
+
+.add{
+    display: flex;
+    justify-content: center;
+    background-color: #fff5fa;
+    width: 200px;
+    height: 30px;
+    border: 2px solid #000;
+}
+
+.add:hover{
+    background-color: #000;
+    color: #fff;
+}
