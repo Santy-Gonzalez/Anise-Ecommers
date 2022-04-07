@@ -1,11 +1,23 @@
 import React from 'react'
 
-const ItemDetail = ({details}) => {
+const ItemDetail = ({imagen , cod , nombre , precio , details}) => {
 
   return (
     <>
       <div>
-        {details.imagen}
+        <img src={imagen} alt="g" />
+      </div>
+      <div>
+        {cod}
+      </div>
+      <div>
+        {nombre}
+      </div>
+      <div>
+        {precio}
+      </div>
+      <div>
+        {details}
       </div>
     </>
   )

@@ -1,8 +1,8 @@
 import React from "react";
-import ItemDetail from "./Components/DetailsProducts/ItemDetail";
-import ItemListContainer from "./Components/ItemList/ItemListContainer";
 import NavBar from "./Components/NavBar/NavBar";
 import NavBarMobile from "./Components/NavBar/NavBarMobile.jsx";
+import ItemDetail from "./Components/DetailsProducts/ItemDetail";
+import ItemListContainer from "./Components/ItemList/ItemListContainer";
 
 
 export default function App() {
