@@ -1,6 +1,7 @@
 import React from 'react'
 import "./styleDetails.css"
 
+
 const ItemDetail = ({imagen , nombre , precio , details}) => {
 
   return (

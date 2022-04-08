@@ -1,0 +1,31 @@
+.flexmain{
+    display: flex;
+    justify-content: center;
+}
+
+.picturemain{
+    width: 1200px;
+    height: 650px;
+    padding: 25px 25px;
+    position: relative;
+}
+
+.picturemain img{
+    width: 100%;
+    height: 100%;
+}
+
+.absolutemain{
+    position: absolute;
+    left: 130px;
+    bottom: -40px;
+}
+.spacenew{
+    padding: 10px;
+    font-family: liberation-sans;
+}
+.spacenew_{
+    padding: 10px;
+    font-weight: 300;
+    font-style: normal;
+}
