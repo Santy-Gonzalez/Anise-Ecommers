@@ -5,6 +5,7 @@ const Footer = () => {
     <>
         <div>
             <h1>Anise</h1>
+            
         </div>
     </>
   )

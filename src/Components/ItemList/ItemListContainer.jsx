@@ -7,7 +7,7 @@ export default function ItemListContainer() {
   return (
     <>
     <div className="back">
-       { <ItemList/>}
+        <ItemList/>
     </div>
     </>
   );
