@@ -3,7 +3,6 @@ import "./stylemain.css"
 import {Link} from 'react-router-dom'
 
 const Main = (ring) => {
-    console.log(ring);
 
   return (
       <>

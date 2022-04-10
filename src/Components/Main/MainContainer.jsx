@@ -6,18 +6,19 @@ const MainContainer = () => {
   const [rings, setRings] = useState([]);
 
   useEffect(() => {
-      fetch("../Json/Products.json")
+      fetch("/public/Products.json")
       .then(response => response.json())
       .then(data => {
-        setRings(data); 
+        console.log(data);
+        setRings(data.filter(ring => ring.id === 1 || ring.id === 2)); 
       })
   }, []);
 
-  const ring = rings.filter(ring => ring.id === 1 || ring.id === 2);
+
 
   return (
     <>
-        <Main ring = {ring}/>
+     <Main rings = {rings}/> 
     </>
   )
 }
