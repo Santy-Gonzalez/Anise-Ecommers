@@ -1,10 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-const MainContainer = () => {
+const MainContainer = ({extraer}) => {
+
   return (
-    <div>
-      
-    </div>
+    <>
+        
+    </>
   )
 }
 

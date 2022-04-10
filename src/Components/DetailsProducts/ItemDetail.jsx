@@ -1,8 +1,11 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 import "./styleDetails.css"
 
 
 const ItemDetail = ({imagen , nombre , precio , details}) => {
+
+  const {id} = useParams()
 
   return (
     <>
