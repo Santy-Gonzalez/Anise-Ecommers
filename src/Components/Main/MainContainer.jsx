@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
-import Main from './Main'
-import Products from '../Json/Products.json'
+import Main from './Main';
 
 const MainContainer = () => {
 
@@ -18,9 +17,7 @@ const MainContainer = () => {
 
   return (
     <>
-      <Main
-       ring = {ring}
-      />
+        <Main ring = {ring}/>
     </>
   )
 }

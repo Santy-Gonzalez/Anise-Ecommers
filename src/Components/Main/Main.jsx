@@ -2,10 +2,28 @@ import React from 'react'
 import "./stylemain.css"
 import {Link} from 'react-router-dom'
 
-const Main = ({ring}) => {
+const Main = (ring) => {
+    console.log(ring);
 
   return (
       <>
+        <div className={ring.cod}>
+        
+            <div className='imagee'>
+                <img src={ring.image} alt="ring" />
+            </div>
+
+            <div className='name'>
+                <div>{ring.name}</div>
+            </div>
+
+            <div className='price'>
+                <div>{ring.price}</div>
+            </div>
+
+
+      </div>
+
        <div className='back'>
                 <div className='flexmain'>
                     <div className='picturemain'>
