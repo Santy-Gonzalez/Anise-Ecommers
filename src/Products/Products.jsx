@@ -1,3 +1,4 @@
+const products = 
 [
     {
     "id": "1",
@@ -83,4 +84,14 @@
     "imagen": "https://images.squarespace-cdn.com/content/v1/5f524ac57dc3b76ad5060050/1599228631051-R9T6H5NFVFR0P63L3WD8/SQSP_Jewelry_Product_111_7800.jpg?format=750w",
     "precio": "€150.00"
 }
-]
+];
+
+export const traerProducto = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(products);
+            console.log(traerProducto);
+        }, 1000);
+    });
+};
+

@@ -32,7 +32,7 @@ export default function NavBar() {
         <div className="Links">
             <ul className="decoration">
                 <Link to={`/`}><li><a>Inicio</a></li></Link>
-                <Link to={`/ItemListContainer`}><li><a>Tienda</a></li></Link>
+                <Link to={`/Items`}><li><a>Tienda</a></li></Link>
                 <li><a>Contacto</a></li>
                 <li><a>Acerca de</a></li>
             </ul>

@@ -6,11 +6,11 @@ const ItemDetailContainer = () => {
 
   const [details, setDetails] = useState({})
 
-    useEffect(() => {
+/*     useEffect(() => {
         traerProducto().then((res) => {
           setDetails(res);
         });
-    }, []);
+    }, []); */
 
   return (
     <>

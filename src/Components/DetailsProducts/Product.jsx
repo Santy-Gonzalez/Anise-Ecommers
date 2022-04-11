@@ -6,7 +6,7 @@ const ring = {
     precio: "€150.00",
     details: "Esta es una pieza de joyería. Hecha a mano con metales preciosos por artesanos de un pequeño pueblo. Es la pieza perfecta para complementar cualquier conjunto.",
 }
-
+/* 
 export const traerProducto = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -14,4 +14,4 @@ export const traerProducto = () => {
         }, 2000);
     });
 };
-
+ */
