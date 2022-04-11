@@ -23,7 +23,7 @@ const Items = ({product}) => {
                 <Grid item xs={12} md={4} sm={6} >
                     <Item>              
                       <div>
-                        <Link to={`../DetailsProducts/ItemDetailContainer.jsx${product.id}`}>
+                        <Link to={`/item/${product.id}`}>
                           <div className='imagee'>
                             <img src={product.imagen} alt="ring" />
                           </div>

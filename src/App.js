@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar/NavBar";
 import NavBarMobile from "./Components/NavBar/NavBarMobile.jsx";
 import ItemDetail from "./Components/DetailsProducts/ItemDetail.jsx";
+import ItemDetailContainer from "./Components/DetailsProducts/ItemDetailContainer.jsx";
 import ItemListContainer from "./Components/ItemList/ItemListContainer";
 import Main from "./Components/Main/Main";
 import Footer from "./Components/Footer/Footer";
@@ -18,7 +19,7 @@ export default function App() {
           <Route exact path="/" element={<Main/>}/>
           <Route exact path="/MainContainer" element={<MainContainer/>}/>
           <Route exact path="/ItemListContainer" element={<ItemListContainer/>}/>
-          <Route exact path="/ItemDetail/:id" element={<ItemDetail/>}/>
+          <Route exact path="/item/:id" element={<ItemDetailContainer/>}/>
         </Routes>
       <Footer/>
     </BrowserRouter>
