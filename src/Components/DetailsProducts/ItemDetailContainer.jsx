@@ -21,11 +21,13 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      <>
-        <ItemDetail article={details} />
-      </>
+      <ItemDetail details = {details} />
     </>
   )
 }
 
 export default ItemDetailContainer;
+
+{/* <>
+<ItemDetail article={details} />
+</> */}

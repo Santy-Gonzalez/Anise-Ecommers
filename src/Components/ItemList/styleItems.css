@@ -65,6 +65,54 @@
     padding-bottom: 10px;
 }
 
+.categoryLink{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px 60px 0px;
+    list-style:none;}
+
+.categoryLink li{
+    font: teimer-web;
+    font-size: 15px;
+}
+
+.categoryLink a{
+    text-decoration: none;
+    color: #000;
+}
+
+.categoryLink li span{
+    padding: 30px;
+}
+
+.tittlelist{
+    display: flex;
+    justify-content: center;
+    padding-right: 20px;
+    padding-top: 70px;
+}
+
+.tittlelist h1{
+    font-size: 60px;
+    font: teimer-web;
+    font-weight: 300;
+}
+
+.container{
+    background-color: #fff5fa;
+    position: relative;
+}
+
+.container::after{
+    content: "";
+    opacity: .2;
+    border-bottom: 1px solid;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
 @media screen and (max-width: 630px) {
     .imagee img{
         width: 270px;

@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import "./styleDetails.css"
 
 const ItemDetail = ({details}) => {
-  console.log(details);
+
+
 
   return (
     <>
