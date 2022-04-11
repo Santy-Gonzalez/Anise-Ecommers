@@ -1,10 +1,12 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import {Grid, Box} from '@material-ui/core'
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import ItemCount from '../ItemList/ItemCount'
 
 const Items = ({product}) => {
+
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor:'#fff5fa',
     padding: theme.spacing(1),
@@ -21,16 +23,17 @@ const Items = ({product}) => {
                 <Grid item xs={12} md={4} sm={6} >
                     <Item>              
                       <div>
+                        <Link to={`../DetailsProducts/ItemDetailContainer.jsx${product.id}`}>
                           <div className='imagee'>
-                            <img src={product.image} alt="ring" />
+                            <img src={product.imagen} alt="ring" />
                           </div>
-
+                        </Link>
                           <div className='name'>
-                            <div>{product.name}</div>
+                            <div>{product.nombre}</div>
                           </div>
 
                           <div className='price'>
-                            <div>{product.price}</div>
+                            <div>{product.precio}</div>
                           </div>
 
                           <div className="count">

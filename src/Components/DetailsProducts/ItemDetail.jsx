@@ -1,26 +1,22 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 import "./styleDetails.css"
 
-
-const ItemDetail = ({imagen , nombre , precio , details}) => {
-
-  const {id} = useParams()
+const ItemDetail = ({details}) => {
 
   return (
     <>
     <div className='detailcontainer'>
         <div className='detailimage'>
-          <img src={imagen} alt="g" />
+          <img src={details.imagen} alt="g" />
         </div>
         <div className='detailname'>
-          {nombre}
+          {details.nombre}
         </div>
         <div className='detailprice'>
-          {precio}
+          {details.precio}
         </div>
         <div className='details'>
-          {details}
+          {details.details}
         </div>
         <div className='amountcontainer'>
           <p className='amount'>Cantidad:</p>

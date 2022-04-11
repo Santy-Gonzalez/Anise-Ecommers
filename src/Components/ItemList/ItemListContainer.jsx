@@ -1,6 +1,6 @@
 import React, { useState , useEffect } from "react";
 import ItemList from "./ItemList";
-import {traerProducto} from "../../Products/Products"
+import {traerProducto} from "../Products/Products"
 import "./styleItems.css"
 
 export default function ItemListContainer() {
@@ -9,14 +9,20 @@ export default function ItemListContainer() {
 
     useEffect(() => {
       traerProducto()
-      .then((res) =>  setProducts(res))
-      .catch((err) => console.log(err));
+      .then((res) =>  {setProducts(res);
+        console.log(res);
+      })
+      .catch((err) => {console.log(err);
+      });
       console.log(products);
-  }, []);
+  }, );
   
   return (
     <>
-        <ItemList products = {products}/>
+    {products ? (
+      <ItemList products = {products}/>
+      ) : (<></>)}
+        
     </>
   );
 }

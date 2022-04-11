@@ -1,21 +1,21 @@
 const products = 
 [
     {
-    "id": "1",
+    "id": 1,
     "cod": "uno",
     "nombre": "Anillo Maggie",
     "imagen": "https://images.squarespace-cdn.com/content/v1/5f524ac57dc3b76ad5060050/1599228653075-WHPTXCS63EID1951JW35/SQSP_Jewelry_Product_101_7423+2.jpg?format=750w",
     "precio": "€150.00"
 },
 {
-    "id": "2",
+    "id": 2,
     "cod": "dos",
     "nombre": "Anillo Ketey",
     "imagen": "https://images.squarespace-cdn.com/content/v1/5f524ac57dc3b76ad5060050/1599228649233-EA2226P5ZORRRLG94NPQ/SQSP_Jewelry_Product_102_7472.jpg?format=750w",
     "precio": "€150.00"
 },
 {
-    "id": "3",
+    "id": 3,
     "cod": "tres",
     "nombre": "Anillo Jude",
     "imagen": "https://images.squarespace-cdn.com/content/v1/5f524ac57dc3b76ad5060050/1599228644232-YNYTI3Z822TE0M1UI8P9/SQSP_Jewelry_Product_103_7506.jpg?format=750w",
@@ -95,3 +95,15 @@ export const traerProducto = () => {
     });
 };
 
+export const detailProduct = (id) =>{
+    return new Promise ((resolve , reject) =>{
+        setTimeout(() => {
+            let articleFilter = products.filter(e => e.id === id);
+            if (articleFilter[0]) {
+                resolve(articleFilter[0]);
+            } else {
+                reject("Err");
+            }
+        }, 1000);
+    })
+}

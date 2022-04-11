@@ -2,14 +2,15 @@ import React from "react";
 import Items from "./Items";
 
 const ItemList =({products}) => {
+  console.log(products);
 
   return (
       <>
-        <div>
             {products.map((product) => {
+              return(
                 <Items key = {product.id} product = {product} />
+              )
             })}
-        </div>
       </>
   );
 }
