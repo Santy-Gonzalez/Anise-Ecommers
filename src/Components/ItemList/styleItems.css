@@ -29,8 +29,10 @@
     justify-content: center;
 }
 
-.counter{
+.counter_{
     grid-area: counter;
+    display: flex;
+    justify-content: center;
 }
 
 .decrement{

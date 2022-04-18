@@ -33,7 +33,7 @@ const Main = (ring) => {
                                 <strong><b>NUEVA COLECCIÓN</b></strong>
                             </div>
                             <div className='spacenew_'>
-                                <span>Universal - <Link to={`/ItemListContainer`}><b>Comprar Ahora</b></Link></span>
+                                <span>Universal - <Link to={`/ItemListContainer`}><b className='spacenew_'>Comprar Ahora</b></Link></span>
                             </div>
                         </div>    
                 </div>

@@ -30,7 +30,6 @@ export default function ItemListContainer() {
         getProductsCategory(categoryId)
         .then((res) => {
           setProducts(res);
-          console.log(res);
         })
         .catch((err) => {
           console.log(err);
@@ -39,11 +38,9 @@ export default function ItemListContainer() {
     }else {
         traerProducto()
         .then((res) =>  {setProducts(res);
-          console.log(res);
         })
         .catch((err) => {console.log(err);
         });
-        console.log(products);
       }
     }, [category]);
 
@@ -70,18 +67,3 @@ export default function ItemListContainer() {
     </>
   );
 }
-
-
-
-
-
-/*     useEffect(() => {
-        traerProducto()
-      .then((res) =>  {setProducts(res);
-        console.log(res);
-      })
-      .catch((err) => {console.log(err);
-      });
-      console.log(products);
-
-  }, ); */
