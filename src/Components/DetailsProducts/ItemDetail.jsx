@@ -1,20 +1,28 @@
-import React, {useState, useEffect} from 'react'
+import React, {useContext, useState} from 'react'
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../Context/CartContextProvider';
 import ItemCount from '../ItemList/ItemCount';
-import "./styleDetails.css"
+import "./styleDetails.css";
 
 const ItemDetail = ({details}) => {
 
     const [number, setNumber] = useState(0);
     const [click, setClick] = useState(false)
 
-    const addCart = (amount) =>{
-      setNumber(amount);
+    const addCart = (quantity) =>{
+      setNumber(quantity);
       setClick(true);
     }
 
     const handleClick = () => {
       setClick(false);
+    }
+
+    const cartContext = useContext(CartContext);
+    const {cart, addItem} = cartContext;
+
+    const onAdd = (quantity) =>{
+      addItem(details, quantity);
     }
 
   return (
@@ -34,7 +42,7 @@ const ItemDetail = ({details}) => {
         </div>
         <div className='amountcontainer'>
         <p className='amount'>Cantidad:</p>
-        {click ? <div> <Link to={"/cart"}> <button> Ir al Carrito </button> </Link> <button onClick={() => handleClick()}>Seguir comprando</button> </div> : <ItemCount initial = {1} stock = {5} addCart={addCart}/>}
+        {click ? <div> <Link to={"/cart"}> <button> Ir al Carrito </button> </Link> <button onClick={() => handleClick()}>Seguir comprando</button> </div> : <ItemCount initial = {1} stock = {5}  addCart={addCart} onAdd={onAdd}/>}
         </div>
     </div>
     </>

@@ -2,7 +2,6 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import ItemCount from '../ItemList/ItemCount'
 
 const Items = ({product}) => {
 
@@ -14,6 +13,7 @@ const Items = ({product}) => {
     boxShadow:'none',
     paddingTop:'50px',
   }));
+
 
   return (
       <>
@@ -35,9 +35,6 @@ const Items = ({product}) => {
                 <div>{product.precio}</div>
               </div>
 
-              <div className="count">
-                <ItemCount initial = {1} stock = {5}/>
-              </div>
             </div>
 
           </Item>

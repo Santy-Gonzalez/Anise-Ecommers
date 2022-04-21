@@ -10,10 +10,8 @@ const ItemDetailContainer = () => {
   const [details, setDetails] = useState({});
 
   useEffect(() => {
-      console.log(id);
     detailProduct(id)
     .then((res) => {setDetails(res);
-      console.log(res);
     })
     .catch((err) => { console.log(err);
     });

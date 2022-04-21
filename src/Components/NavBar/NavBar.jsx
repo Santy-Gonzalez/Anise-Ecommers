@@ -37,7 +37,7 @@ export default function NavBar() {
                 <li><a>Acerca de</a></li>
             </ul>
         </div>
-        <CartWidget/>
+       <CartWidget />
     </nav>
     </>
   );

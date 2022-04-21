@@ -1,18 +1,19 @@
 import React, {useState} from "react";
 
- const ItemCount = ({initial,stock,addCart}) => {
+ const ItemCount = ({initial,stock,addCart,onAdd}) => {
     
-        const [counter, setCounter] = useState(initial);
+        const [quantity, setQuantity] = useState(initial);
+
     
         const handleIncrease = () => {
-            if (counter < stock){
-                setCounter(counter + 1);
+            if (quantity < stock){
+                setQuantity(quantity + 1);
             }
         };
     
         const handleDecrease = () => {
-            if (counter > initial) {
-                setCounter(counter - 1)
+            if (quantity > initial) {
+                setQuantity(quantity - 1)
             }
         }
 
@@ -20,10 +21,10 @@ import React, {useState} from "react";
     <>
 
         <div className="counter">
-            <div className="counter_">{counter}</div>
+            <div className="counter_">{quantity}</div>
             <button className="increase" onClick={handleIncrease}>+</button>
             <button className="decrement" onClick={handleDecrease}>-</button>
-            <button className="reset" onClick={() =>addCart(counter)}>Añadir al Carrito</button>
+            <button className="reset" onClick={() =>addCart(onAdd,quantity)}>Añadir al Carrito</button>
         </div>
     </>
   );
