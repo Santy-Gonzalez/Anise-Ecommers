@@ -24,7 +24,7 @@ import React, {useState} from "react";
             <div className="counter_">{quantity}</div>
             <button className="increase" onClick={handleIncrease}>+</button>
             <button className="decrement" onClick={handleDecrease}>-</button>
-            <button className="reset" onClick={() =>addCart(onAdd,quantity)}>Añadir al Carrito</button>
+            <button className="reset" onClick={() =>addCart(onAdd(quantity),quantity)}>Añadir al Carrito</button>
         </div>
     </>
   );

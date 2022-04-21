@@ -1,16 +1,18 @@
 import React, {useContext, useState} from 'react'
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../Context/CartContextProvider';
+import CartContextProvider from '../../Context/CartContextProvider';
 import ItemCount from '../ItemList/ItemCount';
 import "./styleDetails.css";
 
 const ItemDetail = ({details}) => {
 
     const [number, setNumber] = useState(0);
-    const [click, setClick] = useState(false)
+    const [click, setClick] = useState(false);
+    let { clear } = useContext (CartContext);
 
-    const addCart = (quantity) =>{
-      setNumber(quantity);
+    const addCart = (number) =>{
+      setNumber(number);
       setClick(true);
     }
 
@@ -42,7 +44,7 @@ const ItemDetail = ({details}) => {
         </div>
         <div className='amountcontainer'>
         <p className='amount'>Cantidad:</p>
-        {click ? <div> <Link to={"/cart"}> <button> Ir al Carrito </button> </Link> <button onClick={() => handleClick()}>Seguir comprando</button> </div> : <ItemCount initial = {1} stock = {5}  addCart={addCart} onAdd={onAdd}/>}
+        {click ? <div> <Link to={"/cart"}> <button> Ir al Carrito </button> </Link> <button onClick={() => handleClick()}>Seguir comprando</button> <button onClick={() => clear()}> Limpiar carro</button> </div> : <ItemCount initial = {1} stock = {5} addCart={addCart} onAdd={onAdd}/>}
         </div>
     </div>
     </>

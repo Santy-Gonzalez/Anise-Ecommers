@@ -7,20 +7,36 @@ const CartContextProvider = ({children}) => {
     const [cart, setCart] = useState([]);
 
     const addItem = ((item , quantity) =>{
-      let product = {...item, quantity};
-      setCart([...cart, product]);
-      console.log(cart);
-      console.log(product);
+
+      if (cart.some(el => el.id === item.id)) {
+
+       let index = cart.findIndex(el => el.id === item.id);
+       let product = cart[index];
+       product.quantity = product.quantity + quantity;
+
+        const newCart = [...cart];
+        newCart.splice(index, 1, product);
+
+        setCart([...newCart]);
+
+      } else{
+        let product = {...item, quantity};
+        setCart([...cart, product]);
+      }
     });
 
+    const removeItem = (( id ) =>{
+      let index = newCart.findIndex(el => el.id===id);
 
-    const removeItem = ((item , quantity) =>{
+      const newCart = [...cart];
+      newCart.splice(index, 1);
 
+      setCart([...newCart]);
     });
 
     const clear = ((item , quantity) =>{
         setCart([])
-    })
+    });
 
   return (
     <>
