@@ -1,0 +1,52 @@
+.imageCart{
+    width: 130px;
+    height: 160px;
+}
+.tittleCart{
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+.flexCart{
+    display: flex;
+    justify-content: center;
+}
+.priceCart{
+    padding-right: 30px;
+}
+.gridCart{
+    display: grid;
+    grid-template-areas: 
+    "addCart numberCart removeCart";
+}
+.addCart{
+    grid-area: addCart;
+    cursor: pointer;
+}
+.numberCart{
+    grid-area: numberCart;
+}
+.removeCart{
+    grid-area: removeCart;
+    cursor: pointer;
+}
+.cleanCart{
+    cursor: pointer;
+    background-color: #fff;
+    border-color: #fff;
+}
+.gridBeginning{
+    display: grid;
+    grid-template-areas: 
+    "gridImage gridName";
+    grid-template-columns: 150px 90px;
+}
+.gridName{
+    grid-area: gridName;
+}
+.gridImage{
+    grid-area: gridImage;
+}
+.deleteCart{
+    cursor: pointer;
+}

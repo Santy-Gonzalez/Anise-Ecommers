@@ -1,7 +1,6 @@
 import React, {useContext, useState} from 'react'
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../Context/CartContextProvider';
-import CartContextProvider from '../../Context/CartContextProvider';
 import ItemCount from '../ItemList/ItemCount';
 import "./styleDetails.css";
 
@@ -9,6 +8,8 @@ const ItemDetail = ({details}) => {
 
     const [number, setNumber] = useState(0);
     const [click, setClick] = useState(false);
+    const cartContext = useContext(CartContext);
+    const {cart, addItem} = cartContext;
     let { clear } = useContext (CartContext);
 
     const addCart = (number) =>{
@@ -19,9 +20,6 @@ const ItemDetail = ({details}) => {
     const handleClick = () => {
       setClick(false);
     }
-
-    const cartContext = useContext(CartContext);
-    const {cart, addItem} = cartContext;
 
     const onAdd = (quantity) =>{
       addItem(details, quantity);
