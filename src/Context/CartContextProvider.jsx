@@ -6,12 +6,29 @@ const CartContextProvider = ({children}) => {
 
   const [cart, setCart] = useState([]);
   const [qtyTotal, setQtyTotal] = useState(0);
+  const [price, setPriceTotal] = useState(0);
+  const [individual, setIndividual] = useState(0);
 
+  const priceProduct = () => setIndividual(cart.reduce((ind, item) => (ind + item.precio), 0));
+
+  useEffect(() =>{
+    priceProduct();
+  }, [cart]);
+
+  const priceTotal = () => setPriceTotal(cart.reduce((amount,item) => (item.precio + amount), 0));
+  
+  useEffect(() =>{
+    priceTotal();
+  }, [cart]);
+  
   const quantityTotal = () => setQtyTotal(cart.reduce((total, item) => (total += item.quantity), 0));
   
   useEffect(() =>{
     quantityTotal();
   }, [cart]);
+
+
+
   
   const addItem = ((item , quantity) =>{
 
@@ -65,7 +82,7 @@ const CartContextProvider = ({children}) => {
 
   return (
     <>
-        <CartContext.Provider value={{cart,qtyTotal ,setCart,addItem,removeItem,addProduct,clear}}>
+        <CartContext.Provider value={{individual,priceProduct,price,qtyTotal,cart,setCart,addItem,removeItem,addProduct,clear}}>
             {children}
         </CartContext.Provider>
     </>
@@ -73,3 +90,4 @@ const CartContextProvider = ({children}) => {
 }
 
 export default CartContextProvider;
+  

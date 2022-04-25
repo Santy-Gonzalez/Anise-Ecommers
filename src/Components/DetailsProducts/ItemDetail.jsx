@@ -35,7 +35,7 @@ const ItemDetail = ({details}) => {
           {details.nombre}
         </div>
         <div className='detailprice'>
-          <p className='detailsprice'>{details.precio}</p> 
+          <p className='detailsprice'>€ {details.precio}.00</p> 
         </div>
         <div className='details'>
           <p className='detaildetails'>{details.detail}</p> 

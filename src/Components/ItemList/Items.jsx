@@ -32,7 +32,7 @@ const Items = ({product}) => {
               </div>
 
               <div className='price'>
-                <div>{product.precio}</div>
+                <div>€ {product.precio}.00</div>
               </div>
 
             </div>
