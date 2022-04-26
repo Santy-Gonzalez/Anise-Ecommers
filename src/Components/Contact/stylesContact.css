@@ -1,6 +1,6 @@
-*{
+/* *{
     background-color: #faf8f0;
-}
+} */
 .gridContact{
     display: grid;
     grid-template-areas: 
