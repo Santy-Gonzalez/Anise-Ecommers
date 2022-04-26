@@ -1,6 +1,6 @@
 import React, { useState , useEffect } from "react";
 import ItemList from "./ItemList";
-import {traerProducto , getProductsCategory} from "../Products/Products"
+import {traerProducto , getProductsCategory} from "../Utils/ProductsFireBase"
 import "./styleItems.css"
 import { useParams , Link } from "react-router-dom";
 
@@ -67,3 +67,4 @@ export default function ItemListContainer() {
     </>
   );
 }
+

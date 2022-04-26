@@ -10,13 +10,10 @@ const CartContextProvider = ({children}) => {
 
   const priceTotal = () => setPriceTotal(cart.reduce((amount,item) => (item.precio * item.quantity) + amount, 0));
   
-  useEffect(() =>{
-    priceTotal();
-  }, [cart]);
-  
   const quantityTotal = () => setQtyTotal(cart.reduce((total, item) => (total += item.quantity), 0));
   
   useEffect(() =>{
+    priceTotal();
     quantityTotal();
   }, [cart]);
   
