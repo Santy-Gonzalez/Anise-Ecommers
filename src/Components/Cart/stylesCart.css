@@ -1,20 +1,24 @@
+.backgroundCart{
+    background-color: black;
+}
 .imageCart{
     width: 130px;
     height: 160px;
+    filter: drop-shadow(1px 1px 4px rgb(203, 198, 198));
 }
 .tittleCart{
     font-size: 17px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
-    padding-bottom: 50px;
 }
-
 .flexCart{
     display: flex;
     justify-content: center;
 }
 .priceCart{
     padding-right: 30px;
+    font-size: 14px;
+    font-family:Arial, Helvetica, sans-serif;
 }
 .gridCart{
     display: grid;
@@ -48,6 +52,8 @@
 }
 .gridName{
     grid-area: gridName;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
 }
 .gridImage{
     grid-area: gridImage;
@@ -58,14 +64,36 @@
 .gridAdd{
     display: grid;
     grid-template-areas: 
-    "buttonAdd  deleteCart";
+    "buttonAdd checkoutCart deleteCart";
     grid-template-columns: 160px 160px;
     justify-content: center;
     justify-content: end;
+    padding: 5px;
 }
 .deleteCart{
     grid-area: deleteCart;
+    padding: 10px 5px 0px 6px;
 }
 .buttonAdd{
     grid-area: buttonAdd;
 }
+.checkoutCart{
+    grid-area: checkoutCart;
+    cursor: pointer;
+}
+.buttonCart{
+    padding: 10px;
+    border: 1,5px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.buttonCart:hover{
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+.totalCart{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+

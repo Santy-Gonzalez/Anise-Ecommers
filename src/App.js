@@ -9,6 +9,7 @@ import Footer from "./Components/Footer/Footer";
 import MainContainer from "./Components/Main/MainContainer";
 import CartContainer from "./Components/Cart/CartContainer";
 import CartContextProvider from "./Context/CartContextProvider.jsx";
+import Contact from "./Components/Contact/Contact";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
             <Route exact path="/MainContainer" element={<MainContainer/>}/>
             <Route exact path="/category/:category" element={<ItemListContainer />} />
             <Route exact path="/ItemListContainer" element={<ItemListContainer/>}/>
+            <Route exact path="/Contact" element={<Contact/>}/>
             <Route exact path="/item/:id" element={<ItemDetailContainer/>}/>
             <Route exact path="/cart" element={<CartContainer/>}/>
           </Routes>

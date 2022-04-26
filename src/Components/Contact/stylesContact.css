@@ -1,0 +1,76 @@
+*{
+    background-color: #faf8f0;
+}
+.gridContact{
+    display: grid;
+    grid-template-areas: 
+    "Contact contactWith"
+    "Contact CustomerSupport"
+    "Contact wholesaler"
+    "Contact press"
+    "Contact followUs"
+    "Contact iconsContact";
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    padding-top: 120px;
+    row-gap: 15px;
+}
+
+.Contact{
+    grid-area: Contact;
+    padding-left: 80px;
+    font-size: 30px;
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+.contactWith{
+    grid-area: contactWith;
+}
+.CustomerSupport{
+    grid-area: CustomerSupport;
+}
+.CustomerSupport p{
+    padding-top: 5px;
+    
+}
+.wholesaler{
+    grid-area: wholesaler;
+}
+.wholesaler p{
+    padding-top: 5px;
+}
+.press{
+    grid-area: press;
+}
+.press p{
+    padding-top: 5px;
+}
+.iconsContact{
+    grid-area: iconsContact;
+    display: flex;
+}
+.followUs{
+    grid-area: followUs;
+    padding: 50px 0px 35px 0px;
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 0.9rem;
+}
+.iconsContact a{
+    color: #000;
+}
+.spaceContact{
+    padding-right: 12px;
+}
+.nova{
+    font-size: 0.9rem;
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.anchor p{
+    color: rgb(15, 15, 15);
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-decoration-line: underline;
+    text-underline-offset: 0.2em;
+    line-height: 1.8em;
+    font-size: 0.9rem;
+    cursor: pointer;
+}

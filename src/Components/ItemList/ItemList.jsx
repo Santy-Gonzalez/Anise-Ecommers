@@ -15,6 +15,9 @@ const ItemList =({products}) => {
               )
             })}
       </Grid>
+      <div className="flexItemList">
+        <p>Envío gratuito en compras de más de 100 €</p>
+      </div>
       </>
   );
 }
