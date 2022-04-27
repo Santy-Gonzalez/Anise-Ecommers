@@ -1,25 +1,18 @@
-import { doc, getDoc, getFirestore, getDocs, collection, orderBy, query, where, limit } from "firebase/firestore";
+import { doc, getDoc, getDocs, getFirestore, orderBy, query, where, collection} from "firebase/firestore";
 
-
-export const traerProducto = (id) => {
+export const traerProducto = () => {
     const db = getFirestore();
-    const prodRef = doc(db, "Products", id);
+    const products = collection(db, "Products");
 
-    return getDoc(prodRef);
+    return getDocs(products)
 }
 
-export const detailProduct = (id) => {
+export const getProductsCategory = (categoryId) => {
+    console.log(categoryId);
     const db = getFirestore();
-    const productsRef = collection(db, "Products");
-    const q = query(productsRef, orderBy("category.id", "id"));
-
+    const products = collection(db, "Products");
+    const q = query(products, where("categoryId", "==", categoryId));
+    
     return getDocs(q);
 }
 
-export const getProductsCategory = (id) => {
-    const db = getFirestore();
-    const productsRef = collection(db, "Products");
-    const q = query(productsRef, where("category.id", "==", id));
-
-    return getDocs(q);
-}

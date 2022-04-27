@@ -1,48 +1,44 @@
 import React, { useState , useEffect } from "react";
 import ItemList from "./ItemList";
-import {traerProducto , getProductsCategory} from "../Utils/ProductsFireBase"
 import "./styleItems.css"
 import { useParams , Link } from "react-router-dom";
+import {traerProducto , getProductsCategory} from "../Utils/ProductsFireBase"
 
 export default function ItemListContainer() {
 
-  const {category} = useParams();
+  const {categoryId} = useParams();
 
     const [products, setProducts] = useState([]);
 
     useEffect(()=>{
-      if (category) {
-        let categoryId = null;
-        if (category == "Anillos") {
-          categoryId = 1;
-        }
-        if (category == "Aros") {
-          categoryId = 2;
-        }
-        if (category == "Collares") {
-          categoryId = 3;
-        }
-        if (category == "Pulseras") {
-          categoryId = 4;
-        }
-
       if (categoryId) {
         getProductsCategory(categoryId)
         .then((res) => {
-          setProducts(res);
+          if (res.size === 0) {
+            console.log("No se encontraron resultados");
+          } else {
+            // mapeamos los resultados
+            console.log(res.data);
+            setProducts(
+              res.docs.map((item) => ({ id: item.id, ...item.data() }))
+            );
+          }
         })
         .catch((err) => {
           console.log(err);
         });
       }
-    }else {
+    else {
         traerProducto()
-        .then((res) =>  {setProducts(res);
+        .then((res) =>  
+          {setProducts(
+            res.docs.map((item) => ({ id: item.id, ...item.data() }))
+        );
         })
         .catch((err) => {console.log(err);
         });
       }
-    }, [category]);
+    }, [categoryId]);
 
     return (
       <>
@@ -52,10 +48,10 @@ export default function ItemListContainer() {
       </div>
       <div>
         <ul className="categoryLink">
-          <Link to={"/category/Anillos"}> <li>Anillos <span>|</span></li> </Link>
+          <Link to={"/category/Anillo"}> <li>Anillos <span>|</span></li> </Link>
           <Link to={"/category/Aros"}> <li>Aros <span>|</span></li> </Link>
-          <Link to={"/category/Collares"}> <li>Collares <span>|</span></li>  </Link>
-          <Link to={"/category/Pulseras"}> <li>Pulseras</li> </Link>
+          <Link to={"/category/Collar"}> <li>Collares <span>|</span></li>  </Link>
+          <Link to={"/category/Pulsera"}> <li>Pulseras</li> </Link>
         </ul>
       </div>
     </div>
@@ -67,4 +63,3 @@ export default function ItemListContainer() {
     </>
   );
 }
-
