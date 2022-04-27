@@ -1,4 +1,4 @@
-import { doc, getDoc, getDocs, getFirestore, orderBy, query, where, collection} from "firebase/firestore";
+import {getDocs, getFirestore, query, where, collection} from "firebase/firestore";
 
 export const traerProducto = () => {
     const db = getFirestore();
@@ -16,3 +16,13 @@ export const getProductsCategory = (categoryId) => {
     return getDocs(q);
 }
 
+/* export const getProductCategory = (categoryName) => {
+    console.log(categoryName);
+    const db = getFirestore();
+    const products = collection(db, "Products");
+    const q = query(products, where("categoryName", "==", categoryName));
+    
+    return getDocs(q);
+}
+
+ */

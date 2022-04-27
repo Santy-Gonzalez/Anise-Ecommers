@@ -2,24 +2,24 @@ import React from 'react'
 import "./stylemain.css"
 import {Link} from 'react-router-dom'
 
-const Main = (ring) => {
+const Main = ({rings}) => {
+    console.log(rings);
 
   return (
       <>
-        <div className={ring.cod}>
+        <div className={rings.cod}>
         
             <div className='imagee'>
-                <img src={ring.image} alt="ring" />
+                <img src={rings.imagen} alt="rings" />
             </div>
 
             <div className='name'>
-                <div>{ring.name}</div>
+                <div>{rings.nombre}</div>
             </div>
 
             <div className='price'>
-                <div>{ring.price}</div>
+                <div>{rings.precio}</div>
             </div>
-
 
       </div>
 
