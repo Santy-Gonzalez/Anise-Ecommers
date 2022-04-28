@@ -31,7 +31,7 @@ const Contact = () => {
              <p>correoelectrónico@ejemplo.com</p>
              </div>
          </div>
-         <div>
+         <div className='backContactLoge'>
              <p className='followUs'>Síguenos</p>
                  <div className='iconsContact'>
                      <div className='spaceContact'>
@@ -49,8 +49,31 @@ const Contact = () => {
                         </a>
                     </div>
                 </div>
-            </div>
+         </div>
         </div>
+            <div className='backContact'>
+                <div className='gridSubscribe'>
+                    <div className='bulletinmain'>
+                        <div className='bulletin'>
+                            <p className='news'>Boletín de noticias</p>
+                        </div>
+                        <div className='collections'>
+                            <p className='releases'>Entérate de los lanzamientos de nuevas colecciones,</p>
+                            <p className='releases'>ofertas especiales y otras novedades antes que nadie.</p>
+                        </div>
+                    </div>
+                    <div className='subscribe'>
+                        <div className='center'>
+                            <input type="email" placeholder='Correo Electrónico' name="CorreoElectrónico" id="" />
+                        </div>
+                        <div className='center_'>
+                            <button type='submit'> Suscribirse </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
     </>
   )
 }

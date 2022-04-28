@@ -34,7 +34,7 @@ export default function NavBar() {
                 <li><Link to={`/`}>Inicio</Link></li>
                 <li><Link to={`/ItemListContainer`}>Tienda</Link></li>
                 <li><Link to={`/Contact`}>Contacto</Link></li>
-                <li><a>Acerca de</a></li>
+                <li><Link to={`/About`}>Acerca de</Link></li>
             </ul>
         </div>
        <CartWidget />

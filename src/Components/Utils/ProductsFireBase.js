@@ -15,14 +15,3 @@ export const getProductsCategory = (categoryId) => {
     
     return getDocs(q);
 }
-
-/* export const getProductCategory = (categoryName) => {
-    console.log(categoryName);
-    const db = getFirestore();
-    const products = collection(db, "Products");
-    const q = query(products, where("categoryName", "==", categoryName));
-    
-    return getDocs(q);
-}
-
- */

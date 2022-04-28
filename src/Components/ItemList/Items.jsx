@@ -14,7 +14,6 @@ const Items = ({product}) => {
     paddingTop:'50px',
   }));
 
-
   return (
       <>
         <Item> 

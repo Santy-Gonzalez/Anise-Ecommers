@@ -1,6 +1,9 @@
-/* *{
-    background-color: #faf8f0;
-} */
+.gridContact{
+    background-color: #fff5fa;
+}
+.backContact{
+    background-color: #f4e9ef;
+}
 .gridContact{
     display: grid;
     grid-template-areas: 
@@ -15,7 +18,9 @@
     padding-top: 120px;
     row-gap: 15px;
 }
-
+.backContactLoge{
+    padding-bottom: 50px;
+}
 .Contact{
     grid-area: Contact;
     padding-left: 80px;

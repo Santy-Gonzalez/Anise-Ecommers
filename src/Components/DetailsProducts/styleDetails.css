@@ -19,6 +19,7 @@
 .detailimage img{
     width: 350px;
     height: 450px;
+    filter: drop-shadow(1px 1px 4px rgb(203, 198, 198));
 }
 
 .detailname{
@@ -97,4 +98,10 @@
 .add:hover{
     background-color: #000;
     color: #fff;
+}
+.sweet-loading{
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    padding-right: 50px;
 }
