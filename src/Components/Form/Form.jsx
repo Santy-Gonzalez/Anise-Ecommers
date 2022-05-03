@@ -38,7 +38,7 @@ const Form = ({name, lastname, email, phone, createOrder, setName, setLastname, 
                         </FormControl>
                     </Grid>
                     <div className="spaceGridButton" item md={12}>
-                        <Button onClick={() => {createOrder()}} type='submit' variant='contained' color='success'>Enviar pedido</Button>
+                        <Button onClick={() => {createOrder()}} type='button' variant='contained' color='success'>Enviar pedido</Button>
                     </div>
                 </form>
             </Grid>
