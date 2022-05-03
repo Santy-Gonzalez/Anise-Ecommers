@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import BurguerButton from './BurguerButton'
+import {Link} from 'react-router-dom';
 import CartWidget from "./CartWidget";
+import "./styleNavBar.css";
 
 function NavBarMobile() {
 
@@ -15,14 +17,13 @@ function NavBarMobile() {
     <div className='back'>
       <div className='navcontainer'>
         <div className='tittle__'>
-              <a className='tittle___' href='#H'><p>Anise</p></a>
+          <Link className='tittle___' to={`/`}><p>Anise</p></Link>
         </div>
             <div className={`links ${clicked ? 'active' : ''}`}>
-              <a onClick={handleClick} href="#h">Home</a>
-              <a onClick={handleClick} href="#h">Shop</a>
-              <a onClick={handleClick} href="#h">About</a>
-              <a onClick={handleClick} href="#h">Contact</a>
-              <a onClick={handleClick} href="#h">Blog</a>
+            <Link onClick={handleClick} to={`/`}>Inicio</Link>
+            <Link onClick={handleClick} to={`/ItemListContainer`}>Tienda</Link>
+            <Link onClick={handleClick} to={`/Contact`}>Contacto</Link>
+            <Link onClick={handleClick} to={`/About`}>Acerca de</Link>
             </div>
              <span className='cart'><CartWidget/></span>
             <div className='burguer'>

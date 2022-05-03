@@ -32,27 +32,27 @@ const Footer = () => {
     },
   ];
 
-
   return (
     <>
-    <hr />
-    <div className='gridFooter'>
-      <div className='titleGrid'>
-        <p className='tittleFooter'>Anise</p>
-  
-        <p className='create'>Creado por Santiago Gonzalez</p>
+    <footer>
+      <hr />
+        <div className='gridFooter'>
+          <div className='titleGrid'>
+            <p className='tittleFooter'>Anise</p>
+      
+            <p className='create'>Creado por Santiago Gonzalez</p>
+          </div>
+          <div>
+          <ul className='linksFooter'>
+          {itemsMenu.map((item) => (        
+                <li key={item.title}>
+                  <Link to={item.url}>{item.title}</Link>
+                </li>
+          ))}
+          </ul>
+        </div>
       </div>
-      <div>
-      <ul className='linksFooter'>
-      {itemsMenu.map((item) => (        
-            <li key={item.title}>
-              <Link to={item.url}>{item.title}</Link>
-            </li>
-      ))}
-      </ul>
-    </div>
-    </div>
-
+    </footer>
     </>
   )
 }

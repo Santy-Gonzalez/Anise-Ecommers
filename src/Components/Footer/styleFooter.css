@@ -1,3 +1,15 @@
+html {
+    position: relative; min-height: 100%;
+}
+ 
+body {
+    margin: 0 auto 150px;
+}
+ 
+footer {
+    height: 150px;
+    position: absolute; left: 0; bottom: 0; width: 100%;
+}
 .gridFooter{
     display: grid;
     grid-template-areas: 
@@ -32,6 +44,7 @@
 }
 .linksFooter{
     list-style:none;
+    grid-area: listFooter;
 }
 .linksFooter li a{
     color: #000;
@@ -45,5 +58,50 @@
 .linksFooter li a{
     color: #000;
     padding: 5px;
+}
+@media screen and (max-width: 750px) {
+    .linksFooter{
+        display: grid;
+        grid-template-areas: 
+        "listFooter"
+        "listFooter";
+        grid-template-columns: 1fr;
+    }
+    .linksFooter{
+        list-style:none;
+        grid-area: listFooter;
+    }
+    .gridFooter{
+        display: grid;
+        grid-template-areas: 
+        "titleGrid"
+        "listFooter";
+        grid-template-columns: 1fr;
+        padding: 40px 0px;
+        background-color: #f4e9ef;
+    }
+    .titleGrid{
+        grid-area: titleGrid;
+    }
+    .tittleFooter{
+        font-size: 30px;
+        display: flex;
+        justify-content: start;
+        padding-left: 30px;
+    }
+    .create{
+        font-size: 18px;
+        display: flex;
+        justify-content: start;
+        padding-top: 10px;
+        padding-left: 30px;
+    }
+    .listFooter{
+        grid-area: listFooter;
+    }
+    .linksFooter{
+        padding: 50px 0px 0px 40px;
+        padding-left: 30px;
+    }
 }
 

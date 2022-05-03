@@ -59,6 +59,7 @@ export default function NavBar() {
             </ul>
         </div>
        <CartWidget />
+       
     </nav>
     </>
   );

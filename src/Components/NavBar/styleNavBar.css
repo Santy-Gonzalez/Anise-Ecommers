@@ -96,6 +96,16 @@
   position: absolute;
 }
 
+.ItemListContainer{
+  position: relative;
+}
+.ItemList{
+  position: relative;
+}
+.Items{
+  position: relative;
+}
+
 /* Burguer */
 .nav-icon-5{
   width: 30px;
@@ -252,10 +262,45 @@ a{
     color: white;
     display: inline;
     }
+    .navcontainer{
+      display: none;
+    }
 }
 
-@media(min-width: 768px){
+@media screen and (max-width: 660px) {
   .navcontainer{
-    display: none;
+    padding: .4rem;
+    background-color: #fff5fa;
+    display: grid;
+    grid-template-areas: 
+    "tittle a cart burguer";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+  
+  .burguer{
+    grid-area: burguer;
+    display: flex;
+    justify-content: end;
+  }
+  .cart{
+    grid-area: cart;
+    padding-top: 7px;
+    display: flex;
+    justify-content: start;
+  }
+  .tittle__{
+    grid-area: tittle;
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+  }
+  
+  .tittle___{
+    color: #000;
+    text-decoration: none;
+  }
+  .tittle___ p{
+    font-size: 25px;
 }
+}
+

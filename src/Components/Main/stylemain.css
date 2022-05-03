@@ -7,7 +7,6 @@
     width: 1200px;
     height: 650px;
     padding: 25px 25px;
-    position: relative;
 }
 
 .picturemain img{
@@ -16,27 +15,44 @@
     image-rendering: pixelated;
 }
 
+.flexmain{
+    position: relative;
+}
+
 .absolutemain{
     left: 130px;
     bottom: -40px;
     position: absolute;
 }
-.spacenew{
-    padding: 10px;
-    font-family: liberation-sans;
-    font-size: 15px;
-}
 
+.spacenew{
+    width: 200px;
+    padding: 5px;
+    font-family: liberation-sans; 
+    font-size: 18px;
+    font-weight: 400;
+    position: absolute;
+    left: 10px;
+    bottom: 250px;
+}
 
 .spacenew_{
     padding: 10px;
     font-size: 30px;
     font-weight: 100;
+    width: 500px;
+    position: absolute;
+    left: 10px;
+    bottom: 170px;
 }
 
 .spacenew_ b{
     font-size: 30px;
+    position: absolute;
+    left: 150px;
+    bottom: 0px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 200px;
 }
 
 .spacenew_ a{
@@ -46,7 +62,7 @@
 
 .spacenew_ a:hover{
     color: rgb(63, 60, 60);
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #000;
 }
 
 .back_{
@@ -317,9 +333,11 @@
     .bulletin{
         display: flex;
         justify-content: center;
+        padding-right: 80px;
     }
     .collections{
         text-align: center;
+        padding-right: 70px;
     }
     .center{
         display: flex;
@@ -328,5 +346,103 @@
     .center_{
         display: flex;
         justify-content: center;
+        padding-left: 105px;
+    }
+    .imagemain img{
+        width: 250px;
+        height: 350px;
+    }
+
+    .flexmain{
+        position: relative;
+    }
+    .absolutemain{
+        left: 75px;
+        bottom: -20px;
+        position: absolute;
+    }
+    .spacenew{
+        width: 200px;
+        padding: 5px;
+        font-family: liberation-sans; 
+        font-size: 14px;
+        font-weight: 400;
+        position: absolute;
+        left: 5px;
+        bottom: 200px;
+    }
+    .spacenew_{
+        padding: 10px;
+        font-size: 30px;
+        font-weight: 100;
+        width: 500px;
+        position: absolute;
+        left: 0px;
+        bottom: 130px;
+    }
+    .spacenew_ b{
+        font-size: 30px;
+        position: absolute;
+        left: 150px;
+        bottom: 0px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 200px;
+    }
+    
+    .textmain p{
+        letter-spacing: 1px;
+        font-size: calc((1 - 1) * 1.2vh + 1rem);
+        display: flex;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 660px) {
+    .gridmain{
+        display: grid;
+        grid-template-areas: 
+        "textmain"
+        "buttonmain";
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .textmain{
+        grid-area: textmain;
+    }
+    .buttonmain{
+        grid-area: mainbutton;
+        display: flex;
+        justify-content: center;
+    }
+    .imagemain{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0px 100px 0px;
+    }
+    .imagemain img{
+        width: 200px;
+        height: 300px;
+    }
+    .spacenew_{
+        font-size: 17px;
+        width: 230px;
+        right: 15px;
+        left: 0px;
+        bottom: 110px;
+    }
+    .spacenew{
+        font-size: 17px;
+        left: 5px;
+        bottom: 150px;
+    }
+    .spacenew_ b{
+        font-size: 17px;
+        width: 140px;
+        left: 100px;
+    }
+    .absolutemain{
+        left: 40px;
+        bottom: -40px;
+        position: absolute;
     }
 }
