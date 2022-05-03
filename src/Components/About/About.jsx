@@ -127,10 +127,6 @@ const About = ({rings, ringsTwo, ringsThree}) => {
                     </div>
 
                 </div>
-                <hr />
-                <div>
-                    <Footer/>
-                </div>
         </div>
     </>
   )

@@ -19,6 +19,28 @@ export default function ItemListContainer() {
       </div>
     )
 
+    const itemsMenu = [
+      {
+        title: "Anillos",
+        url: `/category/Anillo`,
+        span: <span>|</span>,
+      },
+      {
+        title: "Aros",
+        url: `/category/Aros`,
+        span: <span>|</span>,
+      },
+      {
+        title: "Collares",
+        url: `/category/Collar`,
+        span: <span>|</span>,
+      },
+      {
+        title: "Pulseras",
+        url: `/category/Pulsera`,
+      },
+    ];
+
     useEffect(()=>{
       setLoading(true);
       if (categoryId) {
@@ -69,10 +91,11 @@ export default function ItemListContainer() {
         </div>
         <div>
           <ul className="categoryLink">
-            <Link to={"/category/Anillo"}> <li>Anillos <span>|</span></li> </Link>
-            <Link to={"/category/Aros"}> <li>Aros <span>|</span></li> </Link>
-            <Link to={"/category/Collar"}> <li>Collares <span>|</span></li>  </Link>
-            <Link to={"/category/Pulsera"}> <li>Pulseras</li> </Link>
+            {itemsMenu.map((item) => (
+              <li key={item.title}>
+                <Link to={item.url}>{item.title} {item.span}</Link>
+              </li>
+            ))}
           </ul>
         </div>
           {products ? (

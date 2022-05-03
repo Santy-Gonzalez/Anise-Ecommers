@@ -1,0 +1,49 @@
+.gridFooter{
+    display: grid;
+    grid-template-areas: 
+    "titleGrid listFooter";
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 0px;
+    background-color: #f4e9ef;
+}
+.titleGrid{
+    grid-area: titleGrid;
+}
+.tittleFooter{
+    font-size: 30px;
+    padding-right: 300px;
+    display: flex;
+    justify-content: center;
+}
+.create{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-right: 150px;
+}
+.listFooter{
+    grid-area: listFooter;
+}
+.linksFooter{
+    display: grid;
+    grid-template-areas: 
+    "listFooter listFooter";
+}
+.linksFooter{
+    list-style:none;
+}
+.linksFooter li a{
+    color: #000;
+    padding: 5px;
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    text-decoration-line: underline;
+    text-underline-offset: 0.2em;
+    line-height: 1.6em;
+}
+.linksFooter li a{
+    color: #000;
+    padding: 5px;
+}
+

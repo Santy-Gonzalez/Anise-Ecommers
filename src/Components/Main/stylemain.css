@@ -100,7 +100,7 @@
     grid-template-areas: 
     "luxurymain cardsMain";
     grid-template-columns: 350px 1fr;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 .luxurymain{
     grid-area: luxurymain;
@@ -259,4 +259,74 @@
 .center_ button:hover{
     background-color: #000;
     color: #fff;
+}
+
+@media screen and (max-width: 1050px) {
+    .cardsMain{
+        display: grid;
+        grid-template-areas: 
+        "cardMainOne"
+        "cardMainTwo";
+        padding: 0px;
+    }
+    .cardMainOne{
+        grid-area: cardMainOne;
+        padding: 15px 0px;
+    }
+    .cardMainTwo{
+        grid-area: cardMainTwo;
+        padding: 0px;
+    }
+    .namemainTwo{
+        padding: 7px 0px;
+    }
+    .maingrid{
+        display: grid;
+        grid-template-areas: 
+        "luxurymain"
+        "cardsMain";
+        grid-template-columns: 1fr;
+    }
+    .luxurymain{
+        grid-area: luxurymain;
+        padding: 15px 0px 15px 30px;
+    }
+    .cardsMain{
+        grid-area: cardsMain;
+        justify-content: center;
+    }
+    .luxury{
+        padding: 0px 20px 10px 0px;
+    }
+    .buyringMain{
+        padding: 15px 30px 5px 0px;
+    }
+    .gridSubscribe{
+        display: grid;
+        grid-template-areas: 
+        "bulletinmain"
+        "subscribe";
+        grid-template-columns: 1fr;
+    }
+    .bulletinmain{
+        grid-area: bulletinmain;
+    }
+    .subscribe{
+        grid-area: subscribe;
+    }
+    .bulletin{
+        display: flex;
+        justify-content: center;
+    }
+    .collections{
+        text-align: center;
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+    }
+    .center_{
+        display: flex;
+        justify-content: center;
+    }
 }

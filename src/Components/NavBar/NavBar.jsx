@@ -4,6 +4,26 @@ import "./styleNavBar.css";
 import {Link} from 'react-router-dom';
 
 export default function NavBar() {
+
+    const itemsMenu = [
+        {
+          title: "Inicio",
+          url: `/`,
+        },
+        {
+          title: "Tienda",
+          url: `/ItemListContainer`,
+        },
+        {
+          title: "Contacto",
+          url: `/Contact`,
+        },
+        {
+          title: "Acerca de",
+          url: `/About`,
+        },
+      ];
+      
   return (
     <>
     <nav className="navbar">
@@ -26,15 +46,16 @@ export default function NavBar() {
         </div>
 
         <div className="tittle">
-            <a href="https://images.squarespace-cdn.com/content/v1/5f524ac57dc3b76ad5060050/1599228653075-WHPTXCS63EID1951JW35/SQSP_Jewelry_Product_101_7423+2.jpg?format=750w">Anise</a>
+            <Link to={`/`}>Anise</Link>
         </div>
 
         <div className="Links">
             <ul className="decoration">
-                <li><Link to={`/`}>Inicio</Link></li>
-                <li><Link to={`/ItemListContainer`}>Tienda</Link></li>
-                <li><Link to={`/Contact`}>Contacto</Link></li>
-                <li><Link to={`/About`}>Acerca de</Link></li>
+                {itemsMenu.map((item) => (
+                    <li key={item.title}>
+                        <Link to={item.url}>{item.title}</Link>
+                    </li>
+                ))}
             </ul>
         </div>
        <CartWidget />
@@ -42,4 +63,3 @@ export default function NavBar() {
     </>
   );
 }
-

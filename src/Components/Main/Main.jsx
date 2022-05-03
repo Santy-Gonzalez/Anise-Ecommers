@@ -87,7 +87,6 @@ const Main = ({rings, ringsTwo}) => {
                   </div>
                     
                 </div>
-                <hr />
                 <div className='gridSubscribe'>
                     <div className='bulletinmain'>
                         <div className='bulletin'>
@@ -108,9 +107,7 @@ const Main = ({rings, ringsTwo}) => {
                     </div>
 
                 </div>
-
             </div>
-            
       </>   
   )
 }
