@@ -92,7 +92,7 @@ export default function ItemListContainer() {
         <div>
           <ul className="categoryLink">
             {itemsMenu.map((item) => (
-              <li key={item.title}>
+              <li className="linksContainer" key={item.title}>
                 <Link to={item.url}>{item.title} {item.span}</Link>
               </li>
             ))}

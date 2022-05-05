@@ -83,6 +83,9 @@ footer {
     .titleGrid{
         grid-area: titleGrid;
     }
+    .titleGrid{
+        width: 300px;
+    }
     .tittleFooter{
         font-size: 30px;
         display: flex;

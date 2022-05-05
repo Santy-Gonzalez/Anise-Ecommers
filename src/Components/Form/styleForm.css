@@ -1,4 +1,7 @@
- .spaceForm{
+.backForm{
+    background-color: #fff5fa;
+}
+.spaceForm{
     padding-top: 20px;
     background-color: #fff5fa;
 }
@@ -14,6 +17,254 @@
     background-color: #fff5fa;
     padding: 20px 0px 40px 0px;
 } 
-.backForm{
-    background-color: #fff5fa;
+.gridThanks{
+    display: grid;
+    grid-template-areas: 
+    "thanks"
+    "codeForm"
+    "purchaseCode"
+    "productsForm"
+    "buttonContinue";
+    padding: 30px 20px 0px 0px;
+    row-gap: 10px;
+}
+.thanks{
+    grid-area: thanks;
+    display: flex;
+    justify-content: center;
+}
+.thanks p{
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.codeForm{
+    grid-area: codeForm;
+    display: flex;
+    justify-content: center;
+}
+.codeForm p{
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.purchaseCode{
+    grid-area: purchaseCode;
+    display: flex;
+    justify-content: center;
+}
+.purchaseCode p{
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.productsForm{
+    grid-area: productsForm;
+    display: flex;
+    justify-content: center;
+}
+.buttonContinue{
+    grid-area: buttonContinue;
+    display: flex;
+    justify-content: center;
+}
+.dataForm{
+    display: grid;
+    grid-template-areas: 
+    "nameForm"
+    "priceForm";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 100px;
+}
+.nameForm{
+    grid-area: nameForm;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.priceForm{
+    grid-area: priceForm;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+.cardsForm{
+    display: grid;
+    grid-template-areas: 
+    "imageForm dataForm";
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    column-gap: 10px;
+}
+.dataForm{
+    grid-area: dataForm;
+    
+}
+.imageForm{
+    grid-area: imageForm;
+}
+.imageFormSize img{
+    width: 150px;
+    height: 200px;
+    filter: drop-shadow(1px 1px 4px rgb(203, 198, 198));
+}
+.productsForm{
+    display: grid;
+    grid-template-areas: 
+    "cardsForm"
+    "containerData";
+}
+.cardsForm{
+    grid-area: cardsForm;
+}
+.containerData{
+    grid-area: containerData;
+    display: flex;
+    justify-content: center;
+}
+.centerForm{
+    display: flex;
+    justify-content: center;
+}
+.buttonContinue{
+    padding: 20px 20px 20px 0px;
+}
+.dataFormBuyer{
+    display: flex;
+    justify-content: center;
+}
+.firstColumn{
+    display: grid;
+    grid-template-areas: 
+    "nameFromGrid"
+    "lastnameFormGrid"
+    "phoneFormGrid"
+    "emailFormGrid";
+
+}
+.nameFromGrid{
+    grid-area: nameFromGrid;
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 2px 0px;
+}
+.lastnameFormGrid{
+    grid-area: lastnameFormGrid;
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 2px 0px;
+}
+.phoneFormGrid{
+    grid-area: phoneFormGrid;
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 2px 0px;
+}
+.emailFormGrid{
+    grid-area: emailFormGrid;
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 2px 0px;
+}
+.secondColumn{
+    display: grid;
+    grid-template-areas: 
+    "NameFromGrid"
+    "LastnameFormGrid"
+    "PhoneFormGrid"
+    "EmailFormGrid";
+}
+.NameFromGrid{
+    grid-area: NameFromGrid;
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 2px 0px;
+}
+.LastnameFormGrid{
+    grid-area: LastnameFormGrid;
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 2px 0px;
+}
+.PhoneFormGrid{
+    grid-area: PhoneFormGrid;
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 2px 0px;
+}
+.EmailFormGrid{
+    grid-area: EmailFormGrid;
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 2px 0px;
+}
+.dataPersonForm{
+    display: grid;
+    grid-template-areas: 
+    "dataFormBuyer dataFormBuyer"
+    "firstColumn secondColumn";
+    column-gap: 20px;
+}
+.dataFormBuyer{
+    grid-area: dataFormBuyer;
+}
+.dataFormBuyer p{
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    padding: 10px 0px;
+}
+.firstColumn{
+    grid-area: firstColumn;
+}
+.secondColumn{
+    grid-area: secondColumn;
+}
+.centerFormMain{
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 480px) {
+    .imageFormSize img{
+        width: 100px;
+        height: 150px;
+    }
+    .imageForm{
+        width: 100px;
+    }
+    .cardsForm{
+        display: grid;
+        grid-template-areas: "imageForm dataForm";
+        grid-template-columns: 100px 1fr;
+        justify-content: center;
+        column-gap: 0px;
+    }
+    .dataForm {
+        display: grid;
+        grid-template-areas:
+            "nameForm"
+            "priceForm";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    .productsForm {
+        display: grid;
+        grid-template-areas:
+            "cardsForm"
+            "containerData";
+    }
+    .NameFromGrid{
+        font-size: 15px;
+    }
+    .LastnameFormGrid{
+        font-size: 15px;
+    }
+    .PhoneFormGrid{
+        font-size: 15px;
+    }
+    .EmailFormGrid{
+        font-size: 15px;
+    }
+    .nameFromGrid{
+        font-size: 15px;
+    }
+    .lastnameFormGrid{
+        font-size: 15px;
+    }
+    .phoneFormGrid{
+        font-size: 15px;
+    }
+    .emailFormGrid{
+        font-size: 15px;
+    }
+    .dataFormBuyer p{
+        font-size: 18px;
+    }
+    
 }

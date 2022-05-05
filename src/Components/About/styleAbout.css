@@ -19,7 +19,6 @@
 .nature p {
     font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 30px;
-    padding-right: 155px;
     padding-top: 20px;
 }
 .imageAbout{
@@ -31,8 +30,7 @@
 .friends{
     grid-area: friends;
     padding-bottom: 30px;
-    width: 250px;
-    padding-left: 90px;
+    padding: 0px 100px 20px 90px;
 }
 .friends p{
     font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -41,8 +39,7 @@
 }
 .collectionsAbout{
     grid-area: collectionsAbout;
-    width: 250px;
-    padding-left: 90px;
+    padding: 0px 100px 0px 90px;
 }
 .collectionsAbout p{
     font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -53,25 +50,58 @@
     width: 500px;
     height: 600px;
 }
-.gridAboutMain{
+
+.gridAboutImageOne{
     display: grid;
     grid-template-areas: 
-    "imageStone imageRing";
-    grid-template-columns: 1fr 1fr;
-    padding-bottom: 100px;
+    "imageStone"
+    "sustainability";
+    row-gap: 15px;
 }
 .imageStone{
     grid-area: imageStone;
     display: flex;
-    justify-content: end;
-    padding-right: 30px;
+    justify-content: center;
+    
+}
+.sustainability{
+    grid-area: sustainability;
+    display: flex;
+    justify-content: center;
+}
+.gridAboutImageTwo{
+    display: grid;
+    grid-template-areas: 
+    "imageRing"
+    "localProduct";
+    row-gap: 15px;
 }
 .imageRing{
     grid-area: imageRing;
     display: flex;
-    justify-content: start;
-    padding-left: 30px;
+    justify-content: center;
+    
 }
+.localProduct{
+    grid-area: localProduct;
+    display: flex;
+    justify-content: center;
+}
+
+.gridAboutMain{
+    display: grid;
+    grid-template-areas: 
+    "gridAboutImageOne gridAboutImageTwo";
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 100px;
+}
+.gridAboutImageOne{
+    grid-area: gridAboutImageOne;
+}
+.gridAboutImageTwo{
+    grid-area: gridAboutImageTwo;
+}
+
 .imageStone img {
     width: 460px;
     height: 600px;
@@ -93,18 +123,6 @@
 .focus p{
     font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 30px;
-}
-.sustainability{
-    display: flex;
-    justify-content: center;
-    padding-left: 170px;
-    padding-top: 10px;
-}
-.localProduct{
-    display: flex;
-    justify-content: center;
-    padding-right: 150px;
-    padding-top: 10px;
 }
 .sustainability p{
     font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -186,4 +204,114 @@
 }
 .BackAbout{
     background-color: #f4e9ef;
+}
+@media screen and (max-width: 1052px) {
+    .cardsAbout{
+        display: grid;
+        grid-template-areas: 
+        "cardMainOne"
+        "cardMainTwo"
+        "cardMainThree ";
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    .cardMainTwo{
+        padding-left: 0px;
+    }
+    .cardMainOne{
+        display: grid;
+        grid-template-areas: 
+        "imagee"
+        "namemain"
+        "pricemain";
+    }
+    .cardMainTwo{
+        display: grid;
+        grid-template-areas: 
+        "imagee"
+        "namemainTwo"
+        "pricemainTwo";
+    }
+    .cardMainThree{
+        display: grid;
+        grid-template-areas: 
+        "imagee"
+        "namemainThree"
+        "pricemainThree";
+    }
+    .gridAbout{
+        padding-top: 75px;
+        padding-bottom: 50px;
+    }
+    .imageAbout img{
+        width: 250px;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .gridAbout{
+        display: grid;
+        grid-template-areas: 
+        "nature"
+        "friends"
+        "collectionsAbout"
+        "imageAbout";
+        grid-template-columns: 1fr;
+    }
+    .nature{
+        display: flex;
+        align-items: center;
+    }
+    .friends{
+        display: flex;
+        text-align: center;
+        padding: 20px 20px 20px 20px;
+    }
+    .collectionsAbout{
+        display: flex;
+        text-align: center;
+        padding: 20px 20px 20px 20px;
+    }
+    .gridAboutImage{
+        display: grid;
+        grid-template-areas: 
+        "focus"
+        "gridAboutMain";
+    }
+    .imageStone img {
+        width: 300px;
+        height: 400px;
+        image-rendering: pixelated;
+    }
+    .imageRing img {
+        width: 300px;
+        height: 400px;
+        image-rendering: pixelated;
+    }
+    .centerAboutMain{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 640px) {
+    .imageStone img {
+        width: 200px;
+        height: 250px;
+        image-rendering: pixelated;
+    }
+    .imageRing img {
+        width: 200px;
+        height: 250px;
+        image-rendering: pixelated;
+    }
+}
+@media screen and (max-width: 500px) {
+    .gridAboutMain{
+        display: grid;
+        grid-template-areas: 
+        "gridAboutImageOne"
+        "gridAboutImageTwo";
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
 }

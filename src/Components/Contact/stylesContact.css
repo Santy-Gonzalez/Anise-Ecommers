@@ -79,3 +79,47 @@
     font-size: 0.9rem;
     cursor: pointer;
 }
+@media screen and (max-width: 820px) {
+    .gridContact{
+        display: grid;
+        grid-template-areas: 
+        "Contact"
+        "contactWith"
+        "CustomerSupport"
+        "wholesaler"
+        "press"
+        "followUs"
+        "iconsContact";
+        grid-template-columns: 1fr;
+        justify-content: center;
+        padding-top: 120px;
+        row-gap: 20px;
+    }
+    .Contact{
+        display: flex;
+        justify-content: center;
+        padding-left: 0px;
+    }
+    .contactWith{
+        text-align: center;
+    }
+    .CustomerSupport{
+        text-align: center;
+    }
+    .wholesaler{
+        text-align: center;
+    }
+    .press{
+        text-align: center;
+    }
+    .backContactLoge{
+        text-align: center;
+    }
+    .iconsContact{
+        display: flex;
+        justify-content: center;
+    }
+    .followUs{
+        padding: 25px 0px 16px 0px;
+    }
+}

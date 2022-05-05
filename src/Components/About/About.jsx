@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Footer from '../Footer/Footer';
 import "./styleAbout.css";
 
 const About = ({rings, ringsTwo, ringsThree}) => {
@@ -11,36 +10,40 @@ const About = ({rings, ringsTwo, ringsThree}) => {
                 <p>Inspirado en la naturaleza</p>
             </div>  
             <div className='friends'>
-                <div>
+                <div className='centerAboutMain'>
                     <p>Las amigas Natasha Drew y Maya Rahim fundaron Anise en 2014 con su enfoque sorprendentemente direccional, sostenible y muy personal para crear joyería fina.</p>
                 </div>
             </div>
             <div className='collectionsAbout'>
-                <p>Todas sus colecciones incluyen anillos simples y atractivos, así como colgantes con texturas creadas a mano y fascinantes líneas limpias. Con un compromiso hacia la sostenibilidad, todas las piezas se hacen localmente con oro de 18k y plata de ley 925 obtenidos de fuentes responsables</p>
+                <div className='centerAboutMain'>
+                    <p>Todas sus colecciones incluyen anillos simples y atractivos, así como colgantes con texturas creadas a mano y fascinantes líneas limpias. Con un compromiso hacia la sostenibilidad, todas las piezas se hacen localmente con oro de 18k y plata de ley 925 obtenidos de fuentes responsables</p>
+                </div>
             </div>
             <div className='imageAbout'>
                 <img src="https://images.squarespace-cdn.com/content/v1/5f524ac57dc3b76ad5060050/1599228694522-K2JNNFPFJUDX1PEIPBXV/2905696.jpg?format=750w" alt="ring" />
             </div>
         </div>
         <div className='backAbout'>
-            <div className='focus'>
-                <p>Nuestro enfoque</p>
-            </div>
-            <div className='gridAboutMain'>
-                <div>
-                    <div className='imageStone'>
-                        <img src="https://images.squarespace-cdn.com/content/v1/5f524ac57dc3b76ad5060050/1599228673895-TWEFIDR3BAQ2LSHFI9GV/1692031-A.jpg?format=750w" alt="stone" />
-                    </div>
-                    <div className='sustainability'>
-                        <p>Sostenibilidad</p>
-                    </div>
+            <div className='gridAboutImage'>
+                <div className='focus'>
+                    <p>Nuestro enfoque</p>
                 </div>
-                <div>
-                    <div className='imageRing'>
-                        <img src="https://images.squarespace-cdn.com/content/v1/5f524ac57dc3b76ad5060050/1599228675963-AE5JIYCVAZWTHE4EQIJH/SQSP_Jewelry_Lifestyle_4_8075.jpg?format=1000w" alt="ring" />
+                <div className='gridAboutMain'>
+                    <div className='gridAboutImageOne'>
+                        <div className='imageStone'>
+                            <img src="https://images.squarespace-cdn.com/content/v1/5f524ac57dc3b76ad5060050/1599228673895-TWEFIDR3BAQ2LSHFI9GV/1692031-A.jpg?format=750w" alt="stone" />
+                        </div>
+                        <div className='sustainability'>
+                            <p>Sostenibilidad</p>
+                        </div>
                     </div>
-                    <div className='localProduct'>
-                        <p>Producto local</p>
+                    <div className='gridAboutImageTwo'>
+                        <div className='imageRing'>
+                            <img src="https://images.squarespace-cdn.com/content/v1/5f524ac57dc3b76ad5060050/1599228675963-AE5JIYCVAZWTHE4EQIJH/SQSP_Jewelry_Lifestyle_4_8075.jpg?format=1000w" alt="ring" />
+                        </div>
+                        <div className='localProduct'>
+                            <p>Producto local</p>
+                        </div>
                     </div>
                 </div>
             </div>
