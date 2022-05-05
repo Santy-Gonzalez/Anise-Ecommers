@@ -1,10 +1,17 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import Aos from "aos";
+import "aos/dist/aos.css";
 import "./stylesContact.css";
 
 const Contact = () => {
+
+    useEffect(()=>{
+        Aos.init({duration:1500});
+    },[])
+    
   return (
     <>
-     <div className='gridContact'>
+     <div data-aos="zoom-in" className='gridContact'>
          <div className='Contact'>
              <p>Contacto</p>
          </div>
@@ -54,15 +61,15 @@ const Contact = () => {
             <div className='backContact'>
                 <div className='gridSubscribe'>
                     <div className='bulletinmain'>
-                        <div className='bulletin'>
+                        <div data-aos="zoom-in" className='bulletin'>
                             <p className='news'>Boletín de noticias</p>
                         </div>
-                        <div className='collections'>
+                        <div data-aos="zoom-in" className='collections'>
                             <p className='releases'>Entérate de los lanzamientos de nuevas colecciones,</p>
                             <p className='releases'>ofertas especiales y otras novedades antes que nadie.</p>
                         </div>
                     </div>
-                    <div className='subscribe'>
+                    <div data-aos="zoom-in" className='subscribe'>
                         <div className='center'>
                             <input type="email" placeholder='Correo Electrónico' name="CorreoElectrónico" id="" />
                         </div>

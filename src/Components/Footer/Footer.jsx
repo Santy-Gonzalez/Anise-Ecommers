@@ -1,8 +1,14 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Link } from "react-router-dom";
 import "./styleFooter.css"
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Footer = () => {
+
+  useEffect(()=>{
+    Aos.init({duration:1500});
+},[])
 
   const itemsMenu = [
     {
@@ -34,7 +40,7 @@ const Footer = () => {
 
   return (
     <>
-    <footer>
+    <footer data-aos="zoom-in">
       <hr />
         <div className='gridFooter'>
           <div className='titleGrid'>

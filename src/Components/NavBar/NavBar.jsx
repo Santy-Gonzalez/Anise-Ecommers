@@ -1,9 +1,15 @@
-import React from "react";
+import React,{useEffect} from "react";
 import CartWidget from "./CartWidget";
 import "./styleNavBar.css";
 import {Link} from 'react-router-dom';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function NavBar() {
+
+    useEffect(()=>{
+      Aos.init({duration:1500});
+  },[])
 
     const itemsMenu = [
         {
@@ -26,7 +32,7 @@ export default function NavBar() {
       
   return (
     <>
-    <nav className="navbar">
+    <nav data-aos="zoom-in"  className="navbar">
         <div className="contact_me">
             <div className="space">
                 <a href="https://www.instagram.com/">

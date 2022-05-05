@@ -1,9 +1,15 @@
-import React from 'react'
-import "./stylemain.css"
+import React, {useEffect} from 'react'
 import {Link} from 'react-router-dom'
+import Aos from "aos";
+import "aos/dist/aos.css";
+import "./stylemain.css"
 
 const Main = ({rings, ringsTwo}) => {
 
+    useEffect(()=>{
+        Aos.init({duration:1500});
+    },[])
+    
   return (
       <>
 
@@ -13,10 +19,10 @@ const Main = ({rings, ringsTwo}) => {
                         <img src="https://images.squarespace-cdn.com/content/v1/5f524ac57dc3b76ad5060050/1599228682136-CXPBR0YQWEZQ6RC4AXC8/Jewelry_Lifestyle_3_7943-1.jpg?format=1500w" alt="imagemain" />
                     </div>
                         <div className='absolutemain'>
-                            <div className='spacenew'>
+                            <div data-aos="zoom-in" className='spacenew'>
                                 <strong><b>NUEVA COLECCIÓN</b></strong>
                             </div>
-                            <div className='spacenew_'>
+                            <div data-aos="zoom-in" className='spacenew_'>
                                 <span>Universal - <Link to={`/ItemListContainer`}><b className='spacenew_'>Comprar Ahora</b></Link></span>
                             </div>
                         </div>    
@@ -24,21 +30,19 @@ const Main = ({rings, ringsTwo}) => {
             </div>
             <div className='back_'>
                 <div className='gridmain'>
-                    <div className='textmain'>
+                    <div data-aos="zoom-in" className='textmain'>
                         <p>Creamos joyería moderna en oro y en plata de ley y nos especializamos en diseños atemporales, producción local y materiales de comercio responsable.</p>
                     </div>
-                    <div className='mainbutton'>
-                        <button className='buttonmain'>
-                            Nuestra historia
-                        </button>
+                    <div data-aos="zoom-in" className='mainbutton'>
+                        <Link to={"/About"}><button className='buttonmain'>Nuestra historia</button></Link>
                     </div>
                 </div>
-                <div className='imagemain'>
+                <div data-aos="zoom-in" className='imagemain'>
                     <img src="https://images.squarespace-cdn.com/content/v1/5f524ac57dc3b76ad5060050/1599228615690-IWLYLRH1JSRWL9RK7LFM/2906547.jpg?format=750w" alt="imagemain2" />
                     <img src="https://images.squarespace-cdn.com/content/v1/5f524ac57dc3b76ad5060050/1599228614947-GVWQ7TYW9XRWH3FSCISJ/SQSP_Jewelry_Lifestyle_1_7571.jpg?format=1500w" alt="imagemain2" />
                 </div>
                 <div className='maingrid'>
-                    <div className='luxurymain'>
+                    <div data-aos="zoom-in" className='luxurymain'>
                         <div className='luxuryMain'>
                             <p className='luxury'> Lujo esencial</p>
                         </div>
@@ -47,7 +51,7 @@ const Main = ({rings, ringsTwo}) => {
                         </div>
                     </div>
 
-                  <div className='cardsMain'>
+                  <div data-aos="zoom-in" className='cardsMain'>
 
                     <div className='cardMainOne'>
 
@@ -87,7 +91,7 @@ const Main = ({rings, ringsTwo}) => {
                   </div>
                     
                 </div>
-                <div className='gridSubscribe'>
+                <div data-aos="zoom-in" className='gridSubscribe'>
                     <div className='bulletinmain'>
                         <div className='bulletin'>
                             <p className='news'>Boletín de noticias</p>

@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -8,16 +8,22 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import {Link} from 'react-router-dom';
 import { CartContext } from "../../Context/CartContextProvider";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import "./stylesCart.css";
 
 export default function Cart({cart,clear,removeItem,}) {
+
+  useEffect(()=>{
+    Aos.init({duration:1500});
+},[])
 
   const {price} = useContext(CartContext);
 
   return (
     <>
     <div >
-      <TableContainer component={Paper}>
+      <TableContainer data-aos="zoom-in" component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>

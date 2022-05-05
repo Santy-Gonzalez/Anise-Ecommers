@@ -186,6 +186,8 @@ span{
 }
 
 .links{
+  padding-top: 100px;
+  z-index: 300;
   position: absolute;
   top: -700px;
   left: -2000px;
@@ -214,7 +216,7 @@ a{
 }
 
 .active{
-  background-color: #222;
+  background-color: rgb(208, 205, 205);
   top: 0;
   left: 0;
   width: 100%;
@@ -222,12 +224,14 @@ a{
 }
 
 .links.active a{
+  padding-top: 35px;
   font-size: 2rem;
   margin-top: 1rem;
   text-decoration: none;
-  color: #fff;
+  color: #000;
   font-family: teimer-web;
   display: block;
+  z-index: 300;
 }
 
 .backburguer{

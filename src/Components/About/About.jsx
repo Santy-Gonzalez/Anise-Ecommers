@@ -1,30 +1,37 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Link} from 'react-router-dom'
+import Aos from "aos";
+import "aos/dist/aos.css";
 import "./styleAbout.css";
 
 const About = ({rings, ringsTwo, ringsThree}) => {
+
+    useEffect(()=>{
+        Aos.init({duration:1500});
+    },[])
+
   return (
     <>
         <div className='gridAbout'>
-            <div className='nature'>
+            <div data-aos="zoom-in" className='nature'>
                 <p>Inspirado en la naturaleza</p>
             </div>  
-            <div className='friends'>
+            <div data-aos="zoom-in" className='friends'>
                 <div className='centerAboutMain'>
                     <p>Las amigas Natasha Drew y Maya Rahim fundaron Anise en 2014 con su enfoque sorprendentemente direccional, sostenible y muy personal para crear joyería fina.</p>
                 </div>
             </div>
-            <div className='collectionsAbout'>
+            <div data-aos="zoom-in" className='collectionsAbout'>
                 <div className='centerAboutMain'>
                     <p>Todas sus colecciones incluyen anillos simples y atractivos, así como colgantes con texturas creadas a mano y fascinantes líneas limpias. Con un compromiso hacia la sostenibilidad, todas las piezas se hacen localmente con oro de 18k y plata de ley 925 obtenidos de fuentes responsables</p>
                 </div>
             </div>
-            <div className='imageAbout'>
+            <div data-aos="zoom-in" className='imageAbout'>
                 <img src="https://images.squarespace-cdn.com/content/v1/5f524ac57dc3b76ad5060050/1599228694522-K2JNNFPFJUDX1PEIPBXV/2905696.jpg?format=750w" alt="ring" />
             </div>
         </div>
         <div className='backAbout'>
-            <div className='gridAboutImage'>
+            <div data-aos="zoom-in" className='gridAboutImage'>
                 <div className='focus'>
                     <p>Nuestro enfoque</p>
                 </div>
@@ -50,13 +57,13 @@ const About = ({rings, ringsTwo, ringsThree}) => {
         </div>
 
         <div className='BackAbout'>
-            <div className='buyNowAbout'>
+            <div data-aos="zoom-in" className='buyNowAbout'>
                 <p>Comprar ahora</p>
             </div>
 
                 <div className='cardsAbout'>
 
-                    <div className='cardMainOne'>
+                    <div data-aos="fade-right" className='cardMainOne'>
 
                         <Link to={`/item/${rings.id}`}>
                             <div className='imagee'>
@@ -73,7 +80,7 @@ const About = ({rings, ringsTwo, ringsThree}) => {
                         </div>
                     </div>
 
-                    <div className='cardMainTwo'>
+                    <div data-aos="zoom-in" className='cardMainTwo'>
 
                         <Link to={`/item/${ringsTwo.id}`}>
                             <div className='imagee'>
@@ -91,7 +98,7 @@ const About = ({rings, ringsTwo, ringsThree}) => {
 
                     </div>
 
-                    <div className='cardMainThree'>
+                    <div data-aos="fade-left" className='cardMainThree'>
 
                         <Link to={`/item/${ringsThree.id}`}>
                             <div className='imagee'>
@@ -109,7 +116,7 @@ const About = ({rings, ringsTwo, ringsThree}) => {
 
                     </div>
                 </div>
-                <div className='gridSubscribe'>
+                <div data-aos="zoom-in" className='gridSubscribe'>
 
                     <div className='bulletinmain'>
                         <div className='bulletin'>

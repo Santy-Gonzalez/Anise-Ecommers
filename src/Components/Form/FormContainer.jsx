@@ -1,19 +1,26 @@
 import React, { useState, useContext, useEffect } from 'react';
 import Form from './Form';
 import { CartContext } from "../../Context/CartContextProvider";
+import { Button } from '@material-ui/core';
 import { getFirestore, collection, addDoc, getDoc, doc} from "firebase/firestore";
 import {Link} from 'react-router-dom';
+import Aos from "aos";
+import "aos/dist/aos.css";
 import "./styleForm.css";
 
 const FormContainer = () => {
 
-    const {price, cart} = useContext(CartContext);
+    useEffect(()=>{
+        Aos.init({duration:1500});
+    },[])
+
+    const {price, cart, clear} = useContext(CartContext);
     const [name, setName] = useState();
     const [lastname, setLastname] = useState();
     const [email, setEmail] = useState();
     const [phone, setPhone] = useState();
     const [orderId, setOrderId] = useState("codigos");
-    const [buy, setBuy] = useState(false)
+    const [buy, setBuy] = useState(false);
     const [product, setProduct] = useState([]);
     const db = getFirestore();
     
@@ -49,26 +56,27 @@ const FormContainer = () => {
 
     const handleClick = () =>{
         setBuy(false);
+        clear();
     }
 
   return (
     <>  
         {buy ?
             <div className='backForm'>
-                <div className='gridThanks'>
+                <div data-aos="zoom-in" className='gridThanks'>
                     <div className='thanks'>
                         <p>Muchas gracias por su compra</p>
                     </div>
-                    <div className='codeForm'>
+                    <div data-aos="zoom-in" className='codeForm'>
                         <p>tu codigo de compra es:</p>
                     </div>
-                    <div className='purchaseCode'>
+                    <div data-aos="zoom-in" className='purchaseCode'>
                         <p>{orderId}</p>
                     </div>
                 </div>
 
                     <div className='productsForm'>
-                        <div className='cardForm'>
+                        <div data-aos="zoom-in" className='cardForm'>
                             {product?.items?.map((item)=>(
                                 <div className='cardsForm'>
                                     <div className='imageForm'>
@@ -85,7 +93,7 @@ const FormContainer = () => {
                             ))}
                         </div>
                         <div className='containerData'>
-                            <div className='dataPersonForm'>
+                            <div data-aos="zoom-in" className='dataPersonForm'>
 
                                 <div className='dataFormBuyer'>
                                     <p>Datos del comprador</p>
@@ -111,8 +119,8 @@ const FormContainer = () => {
                         </div>
                     </div>
 
-                <div className='buttonContinue'>
-                   <Link to={'/ItemListContainer'}><button onClick={()=>{handleClick()}}>Seguir comprando</button></Link> 
+                <div data-aos="zoom-in" className='buttonContinue'>
+                <Link to={'/ItemListContainer'}> <Button type='button' variant='contained' color='success' onClick={()=>{handleClick()}}>Seguir comprando </Button> </Link>
                 </div>
             </div> 
             :

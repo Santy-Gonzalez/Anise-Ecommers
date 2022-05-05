@@ -4,9 +4,14 @@ import "./styleItems.css"
 import { useParams , Link } from "react-router-dom";
 import {traerProducto , getProductsCategory} from "../Utils/ProductsFireBase"
 import CircleLoader from "react-spinners/CircleLoader";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function ItemListContainer() {
+
+  useEffect(()=>{
+      Aos.init({duration:1500});
+  },[])
 
   const {categoryId} = useParams();
 
@@ -86,10 +91,10 @@ export default function ItemListContainer() {
         spinnerTempleate 
         : 
         <div className="container">
-        <div className="tittlelist">
+        <div data-aos="zoom-in" className="tittlelist">
           <h1>Tienda</h1>
         </div>
-        <div>
+        <div data-aos="zoom-in">
           <ul className="categoryLink">
             {itemsMenu.map((item) => (
               <li className="linksContainer" key={item.title}>

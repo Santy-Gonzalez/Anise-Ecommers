@@ -1,14 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Container, FormControl, InputLabel, Input, FormHelperText, Grid, Button } from '@material-ui/core';
+import Aos from "aos";
+import "aos/dist/aos.css";
 import "./styleForm.css";
 
 const Form = ({name, lastname, email, phone, createOrder, setName, setLastname, setEmail, setPhone}) => {
+
+    useEffect(()=>{
+        Aos.init({duration:1500});
+    },[])
 
   return (
     <div className='backForm'>
         <Container className='spaceForm' sx={{ width: 1 }}>
             <Grid className='spaceForm'>
-                <form>
+                <form data-aos="zoom-in">
                     <Grid className="spaceGrid" item md={12}>
                         <FormControl>
                             <InputLabel htmlFor='Nombre'>Nombre</InputLabel>
