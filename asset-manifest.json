@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Anise-Ecommers/static/css/main.9e0f09e9.css",
-    "main.js": "/Anise-Ecommers/static/js/main.da5073cd.js",
+    "main.css": "/Anise-Ecommers/static/css/main.ac378fca.css",
+    "main.js": "/Anise-Ecommers/static/js/main.82bda6e0.js",
     "static/js/787.89c8867b.chunk.js": "/Anise-Ecommers/static/js/787.89c8867b.chunk.js",
     "index.html": "/Anise-Ecommers/index.html",
-    "main.9e0f09e9.css.map": "/Anise-Ecommers/static/css/main.9e0f09e9.css.map",
-    "main.da5073cd.js.map": "/Anise-Ecommers/static/js/main.da5073cd.js.map",
+    "main.ac378fca.css.map": "/Anise-Ecommers/static/css/main.ac378fca.css.map",
+    "main.82bda6e0.js.map": "/Anise-Ecommers/static/js/main.82bda6e0.js.map",
     "787.89c8867b.chunk.js.map": "/Anise-Ecommers/static/js/787.89c8867b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e0f09e9.css",
-    "static/js/main.da5073cd.js"
+    "static/css/main.ac378fca.css",
+    "static/js/main.82bda6e0.js"
   ]
 }
