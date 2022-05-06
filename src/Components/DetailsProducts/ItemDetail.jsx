@@ -6,7 +6,6 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import "./styleDetails.css";
 
-
 const ItemDetail = ({details}) => {
 
   useEffect(()=>{

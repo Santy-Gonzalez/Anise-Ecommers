@@ -100,7 +100,7 @@
 .nav-icon-5{
   width: 30px;
   height: 30px;
-  margin: 10px 60px;
+  margin: 10px 30px 30px 30px;
   position: relative;
   cursor: pointer;
   display: inline-block;
@@ -263,7 +263,7 @@ a{
 
 @media screen and (max-width: 660px) {
   .navcontainer{
-    padding: .4rem;
+    padding: .4rem 0px .4rem .4rem;
     background-color: #fff5fa;
     display: grid;
     grid-template-areas: 
