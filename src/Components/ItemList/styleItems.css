@@ -3,6 +3,11 @@
     margin: 0;
     font-family: teimer-web;
 }
+.sweet-loading{
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+}
 
 .name{
     display: flex;
@@ -28,12 +33,14 @@
     "decrement counter increase"
     "reset reset reset";
     justify-content: center;
+    gap: 10px;
 }
 
 .counter_{
     grid-area: counter;
     display: flex;
     justify-content: center;
+    padding-top: 10px;
 }
 
 .decrement{

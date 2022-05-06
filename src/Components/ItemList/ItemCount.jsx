@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {Button} from '@material-ui/core'
 
  const ItemCount = ({initial,stock,addCart,onAdd}) => {
     
@@ -19,14 +20,14 @@ import React, {useState} from "react";
 
   return (
     <>
-
         <div className="counter">
             <div className="counter_">{quantity}</div>
-            <button className="increase" onClick={handleIncrease}>+</button>
-            <button className="decrement" onClick={handleDecrease}>-</button>
-            <button className="reset" onClick={() =>addCart(onAdd(quantity),quantity)}>Añadir al Carrito</button>
+            <Button variant='contained' color='success' className="increase" onClick={handleIncrease}>+</Button>
+            <Button variant='contained' color='success' className="decrement" onClick={handleDecrease}>-</Button>
+            <Button variant='contained' color='success' className="reset" onClick={() =>addCart(onAdd(quantity),quantity)}>Añadir al Carrito</Button>
         </div>
     </>
   );
 }
 export default ItemCount;
+

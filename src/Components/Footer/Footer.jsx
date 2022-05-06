@@ -16,8 +16,8 @@ const Footer = () => {
       url: `/ItemListContainer`,
     },
     {
-      title: "Instagram",
-      url: `/instagram`,
+      title: "Pinterest",
+      url: `https://ar.pinterest.com/`,
     },
 
     {
@@ -25,16 +25,16 @@ const Footer = () => {
       url: `/Contact`,
     },    
     {
-      title: "Tallas",
-      url: `/Tallas`,
+      title: "Instagram",
+      url: `https://www.instagram.com/santi_gonzalez17/`,
     },
     {
       title: "Acerca de",
       url: `/About`,
     },
     {
-      title: "Pinterest",
-      url: `/Pinterest`,
+      title: "WhatsApp",
+      url: `https://www.whatsapp.com/`,
     },
   ];
 

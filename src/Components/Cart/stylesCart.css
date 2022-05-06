@@ -1,114 +1,233 @@
-.imageCart{
-    width: 130px;
-    height: 160px;
-    filter: drop-shadow(1px 1px 4px rgb(203, 198, 198));
+.mainCartProducts{
+    display: grid;
+    grid-template-areas: 
+    "productsCartCart"
+    "dataCartProducts";
+    row-gap: 30px;
+    padding: 25px 0px 40px 0px;
 }
-.tittleCart{
-    font-size: 17px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 400;
+.gridNameImgCart{
+    width: 200px;
+}
+.productsCartCart{
+    grid-area: productsCartCart;
+    padding-left: 10px;
+    width: 200px;
+}
+.productsCartCart p{
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    text-underline-offset: 0.2em;
+    border-bottom: 1px solid rgb(202, 202, 202);
+}
+.dataCartProducts{
+    grid-area: dataCartProducts;
+}
+.gridNameImgCart{
+    display: grid;
+    grid-template-areas: 
+    "imageProductCart gridName";
+    grid-template-columns: 130px 100px;
+    column-gap: 10px;
+}
+.imageProductCart{
+    grid-area: imageProductCart;
+}
+.gridName{
+    grid-area: gridName;
+    padding: 8px 0px 0px 5px;
+}
+
+.quantityCart{
+    display: grid;
+    grid-template-areas: 
+    "gridCart flexCart";
+}
+.gridCart{
+    grid-area: gridCart;
+    padding-top: 70px;
 }
 .flexCart{
-    display: flex;
-    justify-content: center;
-}
-.priceCart{
-    padding-right: 30px;
-    font-size: 14px;
-    font-family:Arial, Helvetica, sans-serif;
+    grid-area: flexCart;
+    padding-top: 70px;
 }
 .gridCart{
     display: grid;
     grid-template-areas: 
-    "addCart numberCart removeCart";
-    grid-template-columns: 50px 50px 50px;
-    justify-content: end;
-    padding-right: 150px;
+    "addCart numberCart discountCart";
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .addCart{
     grid-area: addCart;
-    cursor: pointer;
 }
 .numberCart{
     grid-area: numberCart;
 }
-.removeCart{
-    grid-area: removeCart;
-    cursor: pointer;
+.discountCart{
+    grid-area: discountCart;
 }
-.cleanCart{
-    cursor: pointer;
-    background-color: #fff;
-    border-color: #fff;
-}
-.gridBeginning{
+.flexCart{
     display: grid;
     grid-template-areas: 
-    "gridImage gridName";
-    grid-template-columns: 150px 90px;
+    "priceCart cleanCart";
 }
-.gridName{
-    grid-area: gridName;
-    font-size: 15px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.imageProductCart img{
+    width: 130px;
+    height: 160px;
+    filter: drop-shadow(1px 1px 4px rgb(203, 198, 198));
 }
-.gridImage{
-    grid-area: gridImage;
+.MainGridCart{
+    display: grid;
+    grid-template-areas: 
+    "FirstGridCart"
+    "SecondGridCart";
+    row-gap: 40px;
 }
-.deleteCart{
-    cursor: pointer;
+.FirstGridCart{
+    grid-area: FirstGridCart;
+}
+.SecondGridCart{
+    grid-area: SecondGridCart;
+}
+.generalMainCart{
+    display: grid;
+    grid-template-areas: 
+    "gridNameImgCart quantityCart";
+    padding-left: 10px;
+}
+.gridNameImgCart{
+    grid-area: gridNameImgCart;
+}
+.quantityCart{
+    grid-area: quantityCart;
+}
+.SecondGridCart{
+    display: grid;
+    grid-template-areas: 
+    "totalSecondGrid priceSecondGrid gridAddSecondGrid";
+    padding-left: 30px;
+    grid-template-columns: 200px 300px 1fr;
+}
+.totalSecondGrid{
+    grid-area: totalSecondGrid;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.priceSecondGrid{
+    grid-area: priceSecondGrid;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.gridAddSecondGrid{
+    grid-area: gridAddSecondGrid;
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
 }
 .gridAdd{
     display: grid;
     grid-template-areas: 
-    "buttonAdd checkoutCart deleteCart";
-    grid-template-columns: 160px 160px;
-    justify-content: center;
-    justify-content: end;
-    padding: 5px;
-}
-.deleteCart{
-    grid-area: deleteCart;
-    padding: 10px 5px 0px 6px;
-}
-.buttonAdd{
-    grid-area: buttonAdd;
+    "checkoutCart deleteCart"
+    "buttonAdd deleteCart";
+    column-gap: 10px;
 }
 .checkoutCart{
     grid-area: checkoutCart;
+    display: flex;
+    justify-content: center;
+}
+.buttonAdd{
+    grid-area: buttonAdd;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+.deleteCart{
+    grid-area: deleteCart;
+    padding-left: 2px;
+    padding-top: 30px;
+}
+.totalSecondGrid p{
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+}
+.priceSecondGrid{
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+}
+.cleanCart svg{
     cursor: pointer;
 }
-.buttonCart{
-    padding: 10px;
-    border: 1,5px solid #000;
-    border-radius: 10px;
-    cursor: pointer;
+@media screen and (max-width: 870px) {
+    .SecondGridCart{
+        display: grid;
+        grid-template-areas: 
+        "totalSecondGrid priceSecondGrid"
+        "gridAddSecondGrid gridAddSecondGrid";
+        grid-template-columns: 1fr 1fr;
+    }
+    .totalSecondGrid{
+        display: flex;
+        justify-content: end;
+        padding-right: 50px;
+    }
+    .priceSecondGrid{
+        display: flex;
+        justify-content: start;
+        
+    }
+    .gridAdd{
+        display: flex;
+        justify-content: center;
+    }
+    .checkoutCart{
+        padding-top: 10px;
+    }
 }
-.buttonCart:hover{
-    background-color: #000;
-    color: #fff;
-    border-color: #000;
-}
-.totalCart{
-    font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 600px) {
+    .quantityCart{
+        display: grid;
+        grid-template-areas: 
+        "gridCart"
+        "flexCart";
+    }
+    .flexCart{
+        padding-top: 0px;
+    }
+    .gridCart{
+        padding-top: 0px;
+    }
+    .addCart{
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    .numberCart{
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    .discountCart{
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    .priceCart{
+        display: flex;
+        justify-content: center;
+    }
     .gridAdd{
         display: grid;
         grid-template-areas: 
-        "buttonAdd" 
-        "checkoutCart" 
+        "checkoutCart"
+        "buttonAdd"
         "deleteCart";
-        grid-template-columns: 1fr;
+        padding-right: 75px;
+    }
+    .deleteCart{
+        display: flex;
         justify-content: center;
-        justify-content: end;
-        padding: 5px;
     }
-    .MuiTableRow-root{
-        display: grid;
-        grid-template-areas: 
-        "MuiTableCell-body";
-    }
-    
 }

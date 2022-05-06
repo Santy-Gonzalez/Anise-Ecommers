@@ -105,6 +105,11 @@
     padding-top: 150px;
     padding-right: 50px;
 }
+.sweet-loading{
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+}
 @media screen and (max-width: 900px) {
     .detailcontainer {
         display: grid;
@@ -120,6 +125,11 @@
         row-gap: 20px;
         background-color: #fff5fa;
         font-family: teimer-web;
+    }
+    .centerDetail{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
     }
 }
 @media screen and (max-width: 446px) {

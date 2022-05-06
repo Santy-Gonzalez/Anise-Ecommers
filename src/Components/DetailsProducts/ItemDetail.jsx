@@ -1,4 +1,5 @@
 import React, {useContext, useEffect ,useState} from 'react'
+import {Button} from '@material-ui/core'
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../Context/CartContextProvider';
 import ItemCount from '../ItemList/ItemCount';
@@ -48,7 +49,7 @@ const ItemDetail = ({details}) => {
         </div>
         <div data-aos="zoom-in" className='amountcontainer'>
         <p className='amount'>Cantidad:</p>
-        {click ? <div> <Link to={"/cart"}> <button> Ir al Carrito </button> </Link> <button onClick={() => handleClick()}>Seguir comprando</button> <button onClick={() => clear()}> Limpiar carro</button> </div> : <ItemCount initial = {1} stock = {5} addCart={addCart} onAdd={onAdd}/>}
+        {click ? <div className='MainButtonsDetail'> <div className='centerDetail'><Link to={"/cart"}> <Button variant='contained' color='success'> Ir al Carrito </Button> </Link></div><Button variant='contained' color='success' onClick={() => handleClick()}>Seguir comprando</Button></div> : <ItemCount initial = {1} stock = {5} addCart={addCart} onAdd={onAdd}/>}
         </div>
     </div>
     </>
