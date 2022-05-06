@@ -50,10 +50,12 @@ const Footer = () => {
           </div>
           <div>
           <ul className='linksFooter'>
-          {itemsMenu.map((item) => (        
+          {itemsMenu.map((item) => (   
+              <div>
                 <li key={item.title}>
                   <Link to={item.url}>{item.title}</Link>
                 </li>
+              </div>
           ))}
           </ul>
         </div>
