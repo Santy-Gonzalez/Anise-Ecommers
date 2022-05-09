@@ -35,20 +35,22 @@ const ItemDetail = ({details}) => {
   return (
     <>
     <div className='detailcontainer'>
-        <div data-aos="flip-left" className='detailimage'>
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" className='detailimage'>
           <img src={details.imagen} alt="g" />
         </div>
-        <div data-aos="zoom-in" className='detailname'>
-          <p>{details.nombre}</p>
+        <div className='detilsGrid'>
+          <div data-aos="zoom-in" className='detailname'>
+            <p>{details.nombre}</p>
+          </div>
+          <div data-aos="zoom-in" className='detailprice'>
+            <p className='detailsprice'>€ {details.precio}.00</p> 
+          </div>
+          <div data-aos="zoom-in" className='details'>
+            <p className='detaildetails'>{details.detail}</p> 
+          </div>
+          <div data-aos="zoom-in" className='amountcontainer'>
+          <p className='amount'>Cantidad:</p>
         </div>
-        <div data-aos="zoom-in" className='detailprice'>
-          <p className='detailsprice'>€ {details.precio}.00</p> 
-        </div>
-        <div data-aos="zoom-in" className='details'>
-          <p className='detaildetails'>{details.detail}</p> 
-        </div>
-        <div data-aos="zoom-in" className='amountcontainer'>
-        <p className='amount'>Cantidad:</p>
         {click ? <div className='MainButtonsDetail'> <div className='centerDetail'><Link to={"/cart"}> <Button variant='contained' color='success'> Ir al Carrito </Button> </Link></div><Button variant='contained' color='success' onClick={() => handleClick()}>Seguir comprando</Button></div> : <ItemCount initial = {1} stock = {5} addCart={addCart} onAdd={onAdd}/>}
         </div>
     </div>

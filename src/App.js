@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import NavBarMobile from "./Components/NavBar/NavBarMobile.jsx";
@@ -16,10 +16,15 @@ import NavBar from "./Components/NavBar/NavBar.jsx";
 initializeFirebase();
 
 export default function App() {
+
+  useEffect(() => {
+    window.onunload = () => window.scrollTo(0, 0);
+  }, [])
+
   return (
     <>
     <CartContextProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/anise-ecommers/">
         <NavBar/>
         <NavBarMobile/>
           <Routes>

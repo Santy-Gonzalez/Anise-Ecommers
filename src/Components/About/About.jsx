@@ -63,7 +63,7 @@ const About = ({rings, ringsTwo, ringsThree}) => {
 
                 <div className='cardsAbout'>
 
-                    <div data-aos="fade-right" className='cardMainOne'>
+                    <div data-aos="zoom-in" className='cardMainOne'>
 
                         <Link to={`/item/${rings.id}`}>
                             <div className='imagee'>
@@ -98,7 +98,7 @@ const About = ({rings, ringsTwo, ringsThree}) => {
 
                     </div>
 
-                    <div data-aos="fade-left" className='cardMainThree'>
+                    <div data-aos="zoom-in" className='cardMainThree'>
 
                         <Link to={`/item/${ringsThree.id}`}>
                             <div className='imagee'>
