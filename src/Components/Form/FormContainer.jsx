@@ -58,6 +58,7 @@ const FormContainer = () => {
         setBuy(false);
         clear();
     }
+    console.log(product);
 
   return (
     <>  
@@ -88,9 +89,13 @@ const FormContainer = () => {
                                     <div className='dataForm'>
                                         <div className='nameForm'><p>{item.nombre}</p></div>
                                         <div className='priceForm'><p>€ {item.precio}.00</p></div>
+                                        <div className='QuantityForm'><p>Cantidad: {item.quantity}</p></div>
                                     </div>
                                 </div>
                             ))}
+                                                <div data-aos="zoom-in" className='totalPayForm'>
+                        <p>Total a pagar: € {price}.00</p>
+                    </div>
                         </div>
                         <div className='containerData'>
                             <div data-aos="zoom-in" className='dataPersonForm'>

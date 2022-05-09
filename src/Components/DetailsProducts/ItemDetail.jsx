@@ -9,9 +9,9 @@ import "./styleDetails.css";
 
 const ItemDetail = ({details}) => {
 
-  useEffect(()=>{
-    Aos.init({duration:1500});
-},[])
+    useEffect(()=>{
+      Aos.init({duration:1500});
+    },[])
 
     const [number, setNumber] = useState(0);
     const [click, setClick] = useState(false);
@@ -39,7 +39,7 @@ const ItemDetail = ({details}) => {
           <img src={details.imagen} alt="g" />
         </div>
         <div data-aos="zoom-in" className='detailname'>
-          {details.nombre}
+          <p>{details.nombre}</p>
         </div>
         <div data-aos="zoom-in" className='detailprice'>
           <p className='detailsprice'>€ {details.precio}.00</p> 

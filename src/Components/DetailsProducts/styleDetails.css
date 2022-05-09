@@ -10,6 +10,7 @@
     column-gap: 100px;
     background-color: #fff5fa;
     font-family: teimer-web;
+    grid-template-columns: 1fr;
 }
 
 .centerDetail{
@@ -55,7 +56,7 @@
     text-align: center;
 }
 .detaildetails{
-    width: 380px;
+    width: 375px;
     font-size: 15px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
@@ -126,6 +127,7 @@
         row-gap: 20px;
         background-color: #fff5fa;
         font-family: teimer-web;
+        grid-template-columns: 1fr;
     }
     .centerDetail{
         display: flex;

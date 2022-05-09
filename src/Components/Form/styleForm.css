@@ -66,30 +66,47 @@
     display: grid;
     grid-template-areas: 
     "nameForm"
-    "priceForm";
+    "priceForm"
+    "QuantityForm";
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 100px;
 }
 .nameForm{
     grid-area: nameForm;
     display: flex;
-    flex-direction: column-reverse;
     align-items: center;
     padding-bottom: 10px;
+}
+.QuantityForm{
+    grid-area: QuantityForm;
+    display: flex;
+    align-items: center;
+    padding-bottom: 50px;
 }
 .priceForm{
     grid-area: priceForm;
     display: flex;
-    justify-content: center;
-    padding-top: 10px;
+    padding-bottom: 50px;
+    align-items: center;
 }
 .cardsForm{
     display: grid;
     grid-template-areas: 
-    "imageForm dataForm";
+    "imageForm dataForm"
+    "totalPayForm totalPayForm";
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     column-gap: 10px;
+}
+.totalPayForm{
+    grid-area: totalPayForm;
+    display: flex;
+    justify-content: center;
+}
+.totalPayForm p{
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 10px 0px;
+    font-size: 17px;
 }
 .dataForm{
     grid-area: dataForm;
@@ -229,7 +246,8 @@
         display: grid;
         grid-template-areas:
             "nameForm"
-            "priceForm";
+            "priceForm"
+            "QuantityForm";
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
     }
