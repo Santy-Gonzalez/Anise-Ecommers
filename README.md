@@ -23,5 +23,5 @@ Iniciar servidor
 #### `npm start`
 
 ## Gif Explicativo 
-![Anise-5-May-2022](![Animation](https://user-images.githubusercontent.com/96139233/169150345-23c82de0-abea-4c7b-a59e-9eeaae600e1c.gif)
-)
+![Animation](https://user-images.githubusercontent.com/96139233/169151707-9287578d-aed7-4e26-bce7-85d064d8d891.gif)
+
