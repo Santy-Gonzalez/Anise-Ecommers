@@ -56,9 +56,7 @@ const FormContainer = () => {
 
     const handleClick = () =>{
         setBuy(false);
-        clear();
     }
-    console.log(product);
 
   return (
     <>  
@@ -79,7 +77,7 @@ const FormContainer = () => {
                     <div className='productsForm'>
                         <div data-aos="zoom-in" className='cardForm'>
                             {product?.items?.map((item)=>(
-                                <div className='cardsForm'>
+                                <div className='cardsForm' key={item.nombre}>
                                     <div className='imageForm'>
                                         <div className='imageFormSize'>
                                             <img src={item.imagen} alt="ring" />
@@ -93,7 +91,7 @@ const FormContainer = () => {
                                     </div>
                                 </div>
                             ))}
-                                                <div data-aos="zoom-in" className='totalPayForm'>
+                    <div data-aos="zoom-in" className='totalPayForm'>
                         <p>Total a pagar: € {price}.00</p>
                     </div>
                         </div>
@@ -125,11 +123,11 @@ const FormContainer = () => {
                     </div>
 
                 <div data-aos="zoom-in" className='buttonContinue'>
-                <Link to={'/ItemListContainer'}> <Button type='button' variant='contained' color='success' onClick={()=>{handleClick()}}>Seguir comprando </Button> </Link>
+                <Link to={'/ItemListContainer'}> <Button type='button' variant='contained' color='default' onClick={()=>{handleClick()}}>Seguir comprando </Button> </Link>
                 </div>
             </div> 
             :
-            <Form 
+            <Form
                 name={name} setName = {setName} 
                 lastname={lastname} setLastname = {setLastname}
                 email={email} setEmail = {setEmail}

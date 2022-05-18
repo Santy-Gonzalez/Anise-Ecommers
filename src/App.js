@@ -24,7 +24,7 @@ export default function App() {
   return (
     <>
     <CartContextProvider>
-      <BrowserRouter basename="/anise-ecommers/">
+      <BrowserRouter>
         <NavBar/>
         <NavBarMobile/>
           <Routes>

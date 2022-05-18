@@ -7,7 +7,7 @@ const ItemList =({products}) => {
   return (
       <>
       <div>
-        <Grid container spacing={{xs: 2, md: 3}} columns={{ xs: 4, sm: 8, md: 12 }}>
+        <Grid container column-spacing={{xs: 2, md: 3}} columns={{ xs: 4, sm: 8, md: 12 }}>
               {products.map((product) => {
                 return(
                   <Grid data-aos="fade-up" item xs={12} md={4} sm={6} key = {product.id}>

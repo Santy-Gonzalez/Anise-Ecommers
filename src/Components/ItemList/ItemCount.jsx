@@ -22,9 +22,9 @@ import {Button} from '@material-ui/core'
     <>
         <div className="counter">
             <div className="counter_">{quantity}</div>
-            <Button variant='contained' color='success' className="increase" onClick={handleIncrease}>+</Button>
-            <Button variant='contained' color='success' className="decrement" onClick={handleDecrease}>-</Button>
-            <Button variant='contained' color='success' className="reset" onClick={() =>addCart(onAdd(quantity),quantity)}>Añadir al Carrito</Button>
+            <Button variant='contained' color='inherit' className="increase" onClick={handleIncrease}>+</Button>
+            <Button variant='contained' color='inherit' className="decrement" onClick={handleDecrease}>-</Button>
+            <Button variant='contained' color='inherit' className="reset" onClick={() =>addCart(onAdd(quantity),quantity)}>Añadir al Carrito</Button>
         </div>
     </>
   );

@@ -51,8 +51,8 @@ const Footer = () => {
           <div>
           <ul className='linksFooter'>
           {itemsMenu.map((item) => (   
-              <div>
-                <li key={item.title}>
+              <div key={item.title}>
+                <li>
                   <Link to={item.url}>{item.title}</Link>
                 </li>
               </div>

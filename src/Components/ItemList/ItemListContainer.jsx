@@ -55,7 +55,6 @@ export default function ItemListContainer() {
             console.log("No se encontraron resultados");
           } else {
             // mapeamos los resultados
-            console.log(res.data);
             setProducts(
               res.docs.map((item) => ({ id: item.id, ...item.data() }))
             );

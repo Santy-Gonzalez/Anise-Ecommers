@@ -51,7 +51,7 @@ const ItemDetail = ({details}) => {
           <div data-aos="zoom-in" className='amountcontainer'>
           <p className='amount'>Cantidad:</p>
         </div>
-        {click ? <div className='MainButtonsDetail'> <div className='centerDetail'><Link to={"/cart"}> <Button variant='contained' color='success'> Ir al Carrito </Button> </Link></div><Button variant='contained' color='success' onClick={() => handleClick()}>Seguir comprando</Button></div> : <ItemCount initial = {1} stock = {5} addCart={addCart} onAdd={onAdd}/>}
+        {click ? <div className='MainButtonsDetail'> <div className='centerDetail'><Link to={"/cart"}> <Button variant='contained' color='default'> Ir al Carrito </Button> </Link></div> <div className='centerDetail'><Button variant='contained' color='default' onClick={() => handleClick()}>Seguir comprando</Button></div></div> : <ItemCount initial = {1} stock = {5} addCart={addCart} onAdd={onAdd}/>}
         </div>
     </div>
     </>

@@ -8,7 +8,6 @@ export const traerProducto = () => {
 }
 
 export const getProductsCategory = (categoryId) => {
-    console.log(categoryId);
     const db = getFirestore();
     const products = collection(db, "Products");
     const q = query(products, where("categoryId", "==", categoryId));
